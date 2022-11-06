@@ -1,9 +1,10 @@
 @import "/src/styles.scss";
 
 body{
+    height: 700px !important;
     background-image: url("../../../assets/img/Background-landingpage.jpg") !important;
     background-color: $azulProfundo !important;
-    background-size: cover;
+    background-size:cover;
 }
 
 #navbarLandingPage{
