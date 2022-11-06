@@ -1,0 +1,77 @@
+@import "/src/styles.scss";
+
+body{
+    background-image: url("../../../assets/img/Background-landingpage.jpg") !important;
+    background-color: $azulProfundo !important;
+    background-size: cover;
+}
+
+#navbarLandingPage{
+    height: 80px;
+    position: relative;
+    top: 50px;
+    background-color: #8ac1ea66 !important;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    font-weight: bolder;
+    color: $hueso;
+}
+
+.contenedor{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.contenedor2{
+    display: flex;
+    margin-top: 100px;
+    align-items: center;
+}
+
+.contenedorInfo{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 260px;
+    background-color: #8ac1ea66 !important;
+    padding: 20px;
+    margin-right: 20px;
+
+}
+
+#imagenLogoMenu{
+        width: 150px;
+        height: 300px;
+        object-fit: scale-down;
+}
+
+#imagenEjemplo{
+    width: 600px;
+    height: 500px;
+    object-fit: scale-down;
+}
+
+#botonCallToAction{
+    color: $hueso;
+    background-color: $azulProfundo;
+    border-radius: 20px;
+    width: 200px;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+}
+
+h2{
+    font-weight: bolder;
+    color: $hueso;
+    font-size: larger;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+#botonMenuSitios,
+#botonMenuPrecios{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
