@@ -10,16 +10,30 @@
     <div class="containerLoginCliente">
         <img id="logoLoginCliente" src="../../../assets/img/Logo.png" alt="">
         <div class="containerInfo">
-            <h1>Iniciar Sesion</h1>
-            <h3>No tienes cuenta?</h3>
-            <h2>Registrate</h2>
+            <mat-card class="cardIniciarSesion">
+                <div class="containerTitulos">
+                    <h1>Iniciar Sesion</h1>
+                    <h3>No tienes cuenta?</h3>
+                    <h2>Registrate</h2>
+                </div>
             <div class="containerBotones">
                 <button id="botonFB" mat-button >Continuar con Facebook</button>
                 <button id="botonGoogle" mat-button >Continuar con Google</button>
             </div>
             <div class="formulario">
-                
+                <mat-form-field>
+                    <mat-label>Correo Electronico</mat-label>
+                    <input matInput type="email" placeholder="Ingrese su correo" required id="correoElectronico">
+                </mat-form-field>
+                <mat-form-field>
+                    <mat-label>Contraseña</mat-label>
+                    <input matInput type="password" placeholder="Ingrese su contraseña" required id="contraseña">
+                </mat-form-field>
             </div>
+            <div class="containerBotonIniciarSesion">
+                <button mat-button id="botonIniciarSesionCliente">Iniciar Sesion</button>
+            </div>
+            </mat-card>
         </div>
     </div>
 </body>

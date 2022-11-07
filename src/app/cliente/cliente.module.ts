@@ -1,15 +1,26 @@
+import { MatButtonModule } from '@angular/material/button';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { LoginClienteComponent } from './login-cliente/login-cliente.component';
-
-
+import {MatInputModule} from '@angular/material/input';
+import {MatFormFieldModule } from '@angular/material/form-field';
+import {MatCardModule} from '@angular/material/card';
 
 @NgModule({
   declarations: [
-    LoginClienteComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatCardModule,
+    MatButtonModule
+  ],
+  exports: [
+    MatInputModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatCardModule,
+    MatButtonModule
   ]
 })
 export class ClienteModule { }

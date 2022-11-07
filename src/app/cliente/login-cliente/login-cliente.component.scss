@@ -1,5 +1,101 @@
+@import '../../../styles.scss';
+
+.cardIniciarSesion{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #8ac1ea66 !important;
+    border-radius: 20px;
+    width: 700px;
+    height: 300px;
+}
+
+.containerLoginCliente{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 #logoLoginCliente{
     width: 300px;
     height: 300px;
-    object-fit: scale-down;
+    object-fit: cover;
 }
+
+.containerInfo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.containerBotones{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.containerTitulos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+h1{
+    font-size: 30px;
+    font-weight:600;
+    color: $azulProfundo;
+}
+
+h3{
+    margin-top: 20px;
+}
+
+h2{
+    color: $azulAlerta;
+    margin-bottom: 20px;
+}
+
+h2:hover{
+    cursor: pointer;
+}
+
+#botonFB,
+#botonGoogle{
+    background-color: $azulTerciario !important;
+    color: white;
+    border: 1px !important;
+    border-style: solid !important;
+    border-color: black !important;
+    font-size:xx-small;
+}
+
+.formulario{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 20px;
+}
+
+.containerBotonIniciarSesion{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+#botonIniciarSesionCliente{
+    margin-top: 30px;
+    background-color: white;
+    color: $azulTerciario;
+    font-weight: 600;
+    border-radius: 20px;
+    border-style: solid !important;
+    border: 1px;
+    border-color: $azulAlerta;
+    width: 190px;
+    height: 50px;
+}
+
