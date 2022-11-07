@@ -1,3 +1,4 @@
+import { LoginClienteComponent } from './cliente/login-cliente/login-cliente.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -12,7 +13,8 @@ import { FooterComponent } from './footer/footer.component';
 @NgModule({
   declarations: [
     AppComponent,
-    FooterComponent
+    FooterComponent,
+    LoginClienteComponent
   ],
   imports: [
     BrowserModule,
@@ -21,7 +23,7 @@ import { FooterComponent } from './footer/footer.component';
     BrowserAnimationsModule,
     MatToolbarModule
   ],
-  exports:[
+  exports:[FooterComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
