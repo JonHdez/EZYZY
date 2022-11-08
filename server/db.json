@@ -1,0 +1,110 @@
+{ 
+    "Cliente" : [ 
+        { 
+            "id":"1", 
+            "nombre":"Jonathan", 
+            "Apellido":"Hernandez", 
+            "correo":"jonathan@gmail.com", 
+            "pasword":"123456", 
+            "fotoUrl":"../src/assets/img/fotoPerfil.webp" 
+        },
+        {
+            "id":"2", 
+            "nombre":"Fares", 
+            "Apellido":"Maldonado", 
+            "correo":"Fares@gmail.com", 
+            "pasword":"123456", 
+            "fotoUrl":"../src/assets/img/fotoPerfil.webp" 
+        },
+        {
+            "id":"3", 
+            "nombre":"Gianella", 
+            "Apellido":"Ardon", 
+            "correo":"Gianella@gmail.com", 
+            "pasword":"123456", 
+            "fotoUrl":"../src/assets/img/fotoPerfil.webp" 
+        }
+    ], 
+    "Empresa" : [ 
+        { 
+            "id":"1", 
+            "nombre":"Kevin", 
+            "Apellido":"Torres", 
+            "correo":"Kevin@gmail.com", 
+            "pasword":"123456", 
+            "empresa": [ 
+                { 
+                    "NombreEmpresa": "Google",
+                    "logoEmpresa":"...", 
+                    "descripcionEmpresa": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At augue eget arcu dictum varius duis at. Ipsum suspendisse ultrices gravida dictum. Donec adipiscing tristique risus nec feugiat in fermentum. ", 
+                    "correoEmpresa":"google@gmail.com", 
+                    "direccionEmpresa":"Estados Unidos", 
+                    "numeroTelefonicoEmpresa":99999999, 
+                    "status": "Activa", 
+                    "plan": "Mensual" 
+                } 
+            ] 
+        },
+        { 
+            "id":"1", 
+            "nombre":"Fabio", 
+            "Apellido":"Fino", 
+            "correo":"Fabio@gmail.com", 
+            "pasword":"123456", 
+            "empresa": [ 
+                {   
+                    "NombreEmpresa": "Amazon",
+                    "logoEmpresa":"...", 
+                    "descripcionEmpresa": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At augue eget arcu dictum varius duis at. Ipsum suspendisse ultrices gravida dictum. Donec adipiscing tristique risus nec feugiat in fermentum. ", 
+                    "correoEmpresa":"Amazon@gmail.com", 
+                    "direccionEmpresa":"Estados Unidos", 
+                    "numeroTelefonicoEmpresa":99999999, 
+                    "status": "Activa", 
+                    "plan": "Mensual" 
+                } 
+            ] 
+        }
+
+    ], 
+    "Administrador" : [ 
+        { 
+            "id":"", 
+            "nombre":"", 
+            "Apellido":"", 
+            "correo":"", 
+            "pasword":"", 
+            "fotoUrl":"" 
+        } 
+    ], 
+
+    "Plan": [ 
+        { 
+            "IdPlan":"", 
+            "tituloDePlan":"", 
+            "precioPlan":"", 
+            "caracteristicas": [ 
+                { 
+                    "caracteristica1":"", 
+                    "caracteristica2":"", 
+                    "caracteristica3":"", 
+                    "caracteristica4":"", 
+                    "caracteristica5":"", 
+                    "caracteristica6":"", 
+                    "caracteristica7":"", 
+                    "caracteristica8":""
+                } 
+            ] 
+        } 
+    ], 
+
+    "Plantillas": [ 
+        { 
+            "idPlantilla":"", 
+            "tituloDePlantilla":"", 
+            "descripcionPlantilla":"", 
+            "codigohtml":"", 
+            "css":"" 
+        } 
+    ] 
+
+}
