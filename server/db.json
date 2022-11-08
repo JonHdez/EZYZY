@@ -1,7 +1,7 @@
 { 
     "Cliente" : [ 
         { 
-            "id":"1", 
+            "id":1, 
             "nombre":"Jonathan", 
             "Apellido":"Hernandez", 
             "correo":"jonathan@gmail.com", 
@@ -9,7 +9,7 @@
             "fotoUrl":"../src/assets/img/fotoPerfil.webp" 
         },
         {
-            "id":"2", 
+            "id":2, 
             "nombre":"Fares", 
             "Apellido":"Maldonado", 
             "correo":"Fares@gmail.com", 
@@ -17,7 +17,7 @@
             "fotoUrl":"../src/assets/img/fotoPerfil.webp" 
         },
         {
-            "id":"3", 
+            "id":3, 
             "nombre":"Gianella", 
             "Apellido":"Ardon", 
             "correo":"Gianella@gmail.com", 
@@ -27,7 +27,7 @@
     ], 
     "Empresa" : [ 
         { 
-            "id":"1", 
+            "id":1, 
             "nombre":"Kevin", 
             "Apellido":"Torres", 
             "correo":"Kevin@gmail.com", 
@@ -46,7 +46,7 @@
             ] 
         },
         { 
-            "id":"1", 
+            "id":1, 
             "nombre":"Fabio", 
             "Apellido":"Fino", 
             "correo":"Fabio@gmail.com", 

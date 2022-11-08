@@ -10,16 +10,19 @@ import {tap} from 'rxjs/operators'
 })
 export class LoginClienteComponent implements OnInit {
   clientes!: Cliente[];
-  constructor(private cliente: ClientesService) {
-    this.cliente.getClientes().pipe(
+  constructor(private clienteSvc: ClientesService) { }
+
+  ngOnInit(): void {
+    this.clienteSvc.getClientes().pipe(
       tap((clientes:Cliente[]) => {
-        this.cliente = cliente
+        this.clientes = clientes
+        console.log(this.clientes)
+
       }
       )
     )
-   }
+    .subscribe();
 
-  ngOnInit(): void {
   }
 
 }
