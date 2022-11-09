@@ -1,3 +1,4 @@
+import { RegistroClienteComponent } from './cliente/registro-cliente/registro-cliente.component';
 import { LandingPageComponent } from './landing-page/landing-page/landing-page.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
@@ -11,6 +12,9 @@ const routes: Routes = [
   {
     path: 'loginCliente', component:LoginClienteComponent
   },
+  {
+    path: 'registroCliente', component:RegistroClienteComponent
+  }
 ];
 
 @NgModule({

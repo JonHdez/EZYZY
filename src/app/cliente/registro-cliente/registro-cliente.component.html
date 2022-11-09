@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro Cliente</title>
+</head>
+<body>
+    <div class="containerRegistroCliente">
+        <img id="logoRegistroCliente" src="../../../assets/img/Logo.png" alt="">
+        <div class="containerInfo">
+            <mat-card class="cardRegistro">
+                <div class="containerTitulos">
+                    <h1>Registrate</h1>
+                    <h3>Ya tienes cuenta?</h3>
+                    <h2 [routerLink]="['/loginCliente']">Inicia Sesion</h2>
+                </div>
+            <div class="containerBotones">
+                <button id="botonFB" mat-button >Continuar con Facebook</button>
+                <button id="botonGoogle" mat-button >Continuar con Google</button>
+            </div>
+            <div class="formulario">
+                <div class="columna1">
+                    <mat-form-field>
+                        <mat-label>Primer Nombre</mat-label>
+                        <input matInput placeholder="Ingrese su primer nombre" required id="primerNombre">
+                    </mat-form-field>
+                </div>
+                <div class="columna2">
+                    <mat-form-field>
+                        <mat-label>Primer Apellido</mat-label>
+                        <input matInput placeholder="Ingrese su primer Apellido" required id="primerApellido">
+                    </mat-form-field>
+                </div>
+                <div class="columna1">
+                    <form class="example-form">
+                        <mat-form-field class="example-full-width" >
+                          <mat-label>Correo Electronico</mat-label>
+                          <input type="email" matInput [formControl]="emailFormControl" [errorStateMatcher]="matcher"
+                                 placeholder="Ej. JuanR@ejemplo.com">
+                          <mat-hint>Ingrese Correo Valido</mat-hint>
+                          <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+                            Por favor registre un correo valido
+                          </mat-error>
+                          <mat-error *ngIf="emailFormControl.hasError('required')">
+                            El correo es <strong>requerido</strong>
+                          </mat-error>
+                        </mat-form-field>
+                    
+                      </form>
+                </div>
+                <div class="columna2">
+                    <form class="example-form">
+                        <mat-form-field class="example-full-width">
+                          <mat-label>Ingresa tu Correo Electronico nuevamente</mat-label>
+                          <input type="email" matInput [formControl]="emailFormControl" [errorStateMatcher]="matcher"
+                                 placeholder="Ej. JuanR@ejemplo.com">
+                          <mat-hint>Ingrese Correo Valido</mat-hint>
+                          <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+                            Por favor registre un correo valido
+                          </mat-error>
+                          <mat-error *ngIf="emailFormControl.hasError('required')">
+                            El correo es <strong>requerido</strong>
+                          </mat-error>
+                        </mat-form-field>
+                      </form>
+                </div>
+                <div class="columna1">
+                    <mat-form-field>
+                        <mat-label>Contraseña</mat-label>
+                        <input matInput type="password" placeholder="Ingrese su contraseña" required id="contraseña">
+                    </mat-form-field>
+                </div>
+                <div class="columna2">
+                    <mat-form-field>
+                        <mat-label>Ingrese la Contraseña nuevamente</mat-label>
+                        <input matInput type="password" placeholder="Ingrese su contraseña" required id="contraseña">
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="containerBotonRegistrate">
+                <button mat-button id="botonRegistrateCliente">Registrate</button>
+            </div>
+            </mat-card>
+        </div>
+    </div>
+    <app-footer></app-footer>
+</body>
+</html>
+
+
+
+
+
+

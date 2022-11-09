@@ -1,0 +1,15 @@
+<mat-toolbar id="navbar">
+    <img class="logoMenu" src="../../assets/img/Logo.png" alt="">
+    <div class="containerMenu">
+        <div class="botonesNav">
+            <button mat-button [matMenuTriggerFor]="menu">Mi Sitio &#11167;</button>
+                <mat-menu #menu="matMenu">
+                    <button mat-menu-item>Pagina1</button>
+                    <button mat-menu-item>Pagina 2</button>
+                </mat-menu>
+            <button class="botonPlantillas" mat-button>Plantillas</button>
+            <button class="botonAyuda" mat-button>Ayuda</button>
+        </div>
+    </div>
+    <div class="usuario">Usuario</div>
+</mat-toolbar>

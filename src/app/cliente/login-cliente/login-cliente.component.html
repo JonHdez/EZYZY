@@ -7,6 +7,7 @@
     <title>Login Cliente</title>
 </head>
 <body>
+    <app-navbar></app-navbar>
     <div class="containerLoginCliente">
         <img id="logoLoginCliente" src="../../../assets/img/Logo.png" alt="">
         <div class="containerInfo">
@@ -14,7 +15,7 @@
                 <div class="containerTitulos">
                     <h1>Iniciar Sesion</h1>
                     <h3>No tienes cuenta?</h3>
-                    <h2>Registrate</h2>
+                    <h2 [routerLink]="['/registroCliente']">Registrate</h2>
                 </div>
             <div class="containerBotones">
                 <button id="botonFB" mat-button >Continuar con Facebook</button>
@@ -23,7 +24,7 @@
             <div class="formulario">
                 <mat-form-field>
                     <mat-label>Correo Electronico</mat-label>
-                    <input matInput type="email" placeholder="Ingrese su correo" required id="correoElectronico">
+                    <input matInput placeholder="Ingrese su correo Electronico" required id="correo">
                 </mat-form-field>
                 <mat-form-field>
                     <mat-label>Contraseña</mat-label>
@@ -36,5 +37,6 @@
             </mat-card>
         </div>
     </div>
+    <app-footer></app-footer>
 </body>
 </html>

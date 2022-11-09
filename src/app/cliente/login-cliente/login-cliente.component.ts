@@ -1,7 +1,7 @@
+import { ClientesService } from './../../services/clientes.service';
 import { Component, OnInit } from '@angular/core';
-import { Cliente } from 'src/app/interfaces/cliente.interface';
-import { ClientesService } from 'src/app/services/clientes.service';
-import {tap} from 'rxjs/operators'
+import {Cliente} from 'src/app/interfaces/cliente.interface';
+import {tap} from 'rxjs/operators';
 
 @Component({
   selector: 'app-login-cliente',
@@ -10,7 +10,7 @@ import {tap} from 'rxjs/operators'
 })
 export class LoginClienteComponent implements OnInit {
   clientes!: Cliente[];
-  constructor(private clienteSvc: ClientesService) { }
+  constructor(private clienteSvc:ClientesService) { }
 
   ngOnInit(): void {
     this.clienteSvc.getClientes().pipe(
@@ -26,3 +26,4 @@ export class LoginClienteComponent implements OnInit {
   }
 
 }
+
