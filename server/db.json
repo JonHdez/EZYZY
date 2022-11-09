@@ -68,12 +68,12 @@
     ], 
     "Administrador" : [ 
         { 
-            "id":"", 
-            "nombre":"", 
-            "Apellido":"", 
-            "correo":"", 
-            "pasword":"", 
-            "fotoUrl":"" 
+            "id":1, 
+            "nombre":"David", 
+            "Apellido":"Rodriguez", 
+            "correo":"David@gmail.com", 
+            "pasword":"1123345647", 
+            "fotoUrl":"../src/assets/img/fotoPerfil.webp" 
         } 
     ], 
 

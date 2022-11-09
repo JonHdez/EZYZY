@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { tap } from 'rxjs/operators';
+import { Administrador } from 'src/app/interfaces/administrador.interface';
+import { AdministradorsService } from '../../services/administrador.service';
 
 @Component({
   selector: 'app-home-admin',
@@ -6,10 +9,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home-admin.component.scss']
 })
 export class HomeAdminComponent implements OnInit {
-
-  constructor() { }
+  administradores!: Administrador[]
+  constructor(private administradorSvc: AdministradorsService) { }
 
   ngOnInit(): void {
+    this.administradorSvc.getAdministradors().pipe(
+      tap((administradores:Administrador[]) => {
+        this.administradores = administradores;
+        console.log(this.administradores);
+      })).subscribe();
   }
 
 }
