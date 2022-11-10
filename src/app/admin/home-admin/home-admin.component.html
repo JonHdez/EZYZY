@@ -8,19 +8,47 @@
 </head>
 <body>
 
-    <div class="adminPerfil">
-        <p class="bienvenido">Bienvenido</p>
-        <p class="nombreAdmin">{{administradores[0].nombre}}</p>
-        <img src="../../../assets/img/fotoPerfil.webp" alt="">
-    </div>
-    <div>
-        <button mat-button color="primary">Primary</button>
-        <button mat-button color="warn">Warn</button>
-         <mat-tab-group>
-            <mat-tab label="First">Content 1</mat-tab>
-            <mat-tab label="Second">Content 2</mat-tab>
-            <mat-tab label="Third">Content 3</mat-tab>
-        </mat-tab-group> 
+
+    <div class="container">
+        <h1>Administrador</h1>
+            <mat-card class="card-administrador">
+                <div class="adminPerfil">
+                    <p class="bienvenido">Bienvenido</p>
+                    <p class="nombreAdmin">{{administradores[0].nombre}} {{administradores[0].apellido}}</p>
+                    <img src="../../../assets/img/fotoPerfil.webp" alt="">
+                </div>
+                <mat-tab-group color="primary" mat-align-tabs="center" class="tabs">
+                    <mat-tab label="Administracion de Plantillas">
+                        <div class="plantillas">
+                            <p class="plantillasTexto">Plantillas Disponibles</p>
+                            <button class="btn-aggPlantilla" mat-raised-button color="primary">
+                               + Agragar Nueva Plantilla</button>
+                        </div>
+                        <div class="card-container">
+                            <mat-card *ngFor="let plantilla of plantillas" class="card">
+                                <img class="img-card" mat-card-image src="../../../assets/img/diigo.jpeg" alt="">
+                                <mat-card-content>
+                                    <mat-card-title>{{plantilla.tituloDePlantilla
+                                    }}</mat-card-title> 
+                                    <p> {{plantilla.descripcionPlantilla
+                                    }}</p>
+                                </mat-card-content>
+                                <mat-card-actions align="end">
+                                    <button mat-raised-button color="primary" >Editar</button>
+                                </mat-card-actions>
+                            </mat-card>
+                        </div>                                  
+                    </mat-tab>
+        
+                    <mat-tab label="Gestion de Planes">Content 2
+        
+                    </mat-tab>
+                    
+                    <mat-tab label="Gestion de Cuentas">Content 3
+        
+                    </mat-tab>
+                </mat-tab-group> 
+            </mat-card>
     </div>
     
 </body>

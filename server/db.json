@@ -70,7 +70,7 @@
         { 
             "id":1, 
             "nombre":"David", 
-            "Apellido":"Rodriguez", 
+            "apellido":"Rodriguez", 
             "correo":"David@gmail.com", 
             "pasword":"1123345647", 
             "fotoUrl":"../src/assets/img/fotoPerfil.webp" 
@@ -99,12 +99,45 @@
 
     "Plantillas": [ 
         { 
-            "idPlantilla":"", 
-            "tituloDePlantilla":"", 
-            "descripcionPlantilla":"", 
-            "codigohtml":"", 
-            "css":"" 
-        } 
+            "idPlantilla":1, 
+            "tituloDePlantilla":"Platilla 1", 
+            "descripcionPlantilla":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At augue eget arcu dictum varius duis at. Ipsum suspendisse ultrices gravida dictum. Donec adipiscing tristique risus nec feugiat in fermentum. ", 
+            "correoEmpresa":"Amazon@gmail.com", 
+            "codigohtml":"/", 
+            "css":"/" 
+        },
+        { 
+            "idPlantilla":2, 
+            "tituloDePlantilla":"Platilla 2", 
+            "descripcionPlantilla":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At augue eget arcu dictum varius duis at. Ipsum suspendisse ultrices gravida dictum. Donec adipiscing tristique risus nec feugiat in fermentum. ", 
+            "correoEmpresa":"Amazon@gmail.com", 
+            "codigohtml":"/", 
+            "css":"/" 
+        },
+        { 
+            "idPlantilla":3, 
+            "tituloDePlantilla":"Platilla 3", 
+            "descripcionPlantilla":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At augue eget arcu dictum varius duis at. Ipsum suspendisse ultrices gravida dictum. Donec adipiscing tristique risus nec feugiat in fermentum. ", 
+            "correoEmpresa":"Amazon@gmail.com", 
+            "codigohtml":"/", 
+            "css":"/" 
+        },
+        { 
+            "idPlantilla":4, 
+            "tituloDePlantilla":"Platilla 4", 
+            "descripcionPlantilla":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At augue eget arcu dictum varius duis at. Ipsum suspendisse ultrices gravida dictum. Donec adipiscing tristique risus nec feugiat in fermentum. ", 
+            "correoEmpresa":"Amazon@gmail.com", 
+            "codigohtml":"/", 
+            "css":"/" 
+        },
+        { 
+            "idPlantilla":5, 
+            "tituloDePlantilla":"Platilla 5", 
+            "descripcionPlantilla":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At augue eget arcu dictum varius duis at. Ipsum suspendisse ultrices gravida dictum. Donec adipiscing tristique risus nec feugiat in fermentum. ", 
+            "correoEmpresa":"Amazon@gmail.com", 
+            "codigohtml":"/", 
+            "css":"/" 
+        }
     ] 
 
 }

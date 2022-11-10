@@ -7,7 +7,7 @@ import { Plantilla } from '../interfaces/plantilla.interface';
   providedIn: 'root'
 })
 export class PlantillasService {
-  private apiUrl = 'http://localhost:3000/Plantilla'
+  private apiUrl = 'http://localhost:3000/Plantillas'
   constructor(private http: HttpClient) { }
 
   getPlantillas():Observable<Plantilla[]>{

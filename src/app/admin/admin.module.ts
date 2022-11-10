@@ -4,6 +4,8 @@ import { CommonModule } from '@angular/common';
 import { LoginComponent } from './login/login.component';
 import { HomeAdminComponent } from './home-admin/home-admin.component';
 import { MatButtonModule } from '@angular/material/button';
+import {MatGridListModule} from '@angular/material/grid-list';
+import { MatIconModule } from '@angular/material/icon';
 
 
 @NgModule({
@@ -16,13 +18,17 @@ import { MatButtonModule } from '@angular/material/button';
   imports: [
     CommonModule,
     MatButtonModule,
-    MatTabsModule
+    MatTabsModule,
+    MatGridListModule,
+    MatIconModule
   ],
 
   exports: [
     CommonModule,
     MatButtonModule,
-    MatTabsModule
+    MatTabsModule,
+    MatGridListModule,
+    MatIconModule
   ]
 })
 export class AdminModule { }

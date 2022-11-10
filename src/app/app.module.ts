@@ -14,6 +14,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FooterComponent } from './footer/footer.component';
 import { MatCardModule } from '@angular/material/card';
 import { HomeAdminComponent } from './admin/home-admin/home-admin.component';
+import {MatGridListModule} from '@angular/material/grid-list';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -34,6 +36,8 @@ import { HomeAdminComponent } from './admin/home-admin/home-admin.component';
     MatButtonModule,
     HttpClientModule,
     MatTabsModule,
+    MatGridListModule,
+    MatIconModule
   ],
   exports:[FooterComponent
   ],

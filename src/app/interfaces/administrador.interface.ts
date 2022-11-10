@@ -1,7 +1,7 @@
 export interface Administrador {
     id:number; 
     nombre:string; 
-    Apellido:string; 
+    apellido:string; 
     correo:string; 
     pasword:string; 
     fotoUrl:string; 
