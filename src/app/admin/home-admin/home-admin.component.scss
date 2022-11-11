@@ -63,7 +63,55 @@ div.caracteristicas {
     }
     
 }
+.descripcion {
+    text-align: center;
+    font-size: large;
+    margin-bottom: 35px;
+}
 
+div.plan-status {
+    display: flex;
+    flex-direction: column;
+
+    div {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin-bottom: 25px;
+    }
+
+
+
+    h3 {
+        font-size: x-large;
+    }
+    
+    p {
+        font-size: x-large;
+    }
+}
+
+div.logo-nombre-empresa {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+
+    .img-logo {
+        width: 40%;
+    }
+    .nombre-dueño{
+        font-size: x-large;
+        padding-bottom: 15px;
+
+    }
+    .nombre-empresa{
+        font-size: 60px;
+
+    }
+
+}
 
 div.btns-modificar {
 
@@ -137,10 +185,18 @@ hr {border: 2px solid $azulProfundo; height: 2px; background-color: $azulSecunda
     text-align: center;
 
 }
+.card-empresa {
+    background-color: $azulClaro;
+    display: flex;
+    flex-direction: column;
+    border-radius: 25px;
+    text-align: start;
+    color: #FFFFFF;
+
+}
 
 
 .tabla-planes {
-
     background-color: $azulCuaternario;
     width: 100%;
     color: #FFFFFF !important;

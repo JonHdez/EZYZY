@@ -35,7 +35,7 @@
             "empresa": [ 
                 { 
                     "NombreEmpresa": "Google",
-                    "logoEmpresa":"...", 
+                    "logoEmpresa":"/src/assets/img/logo-Google.png", 
                     "descripcionEmpresa": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At augue eget arcu dictum varius duis at. Ipsum suspendisse ultrices gravida dictum. Donec adipiscing tristique risus nec feugiat in fermentum. ", 
                     "correoEmpresa":"google@gmail.com", 
                     "direccionEmpresa":"Estados Unidos", 
@@ -54,7 +54,7 @@
             "empresa": [ 
                 {   
                     "NombreEmpresa": "Amazon",
-                    "logoEmpresa":"...", 
+                    "logoEmpresa":"/src/assets/img/logo-Google.png", 
                     "descripcionEmpresa": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At augue eget arcu dictum varius duis at. Ipsum suspendisse ultrices gravida dictum. Donec adipiscing tristique risus nec feugiat in fermentum. ", 
                     "correoEmpresa":"Amazon@gmail.com", 
                     "direccionEmpresa":"Estados Unidos", 
@@ -63,7 +63,65 @@
                     "plan": "Mensual" 
                 } 
             ] 
+        },
+        { 
+            "id":3, 
+            "nombre":"Keiry", 
+            "Apellido":"Sevilla", 
+            "correo":"Keiry@gmail.com", 
+            "pasword":"123456", 
+            "empresa": [ 
+                { 
+                    "NombreEmpresa": "Instagram",
+                    "logoEmpresa":"/src/assets/img/logo-Google.png", 
+                    "descripcionEmpresa": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At augue eget arcu dictum varius duis at. Ipsum suspendisse ultrices gravida dictum. Donec adipiscing tristique risus nec feugiat in fermentum. ", 
+                    "correoEmpresa":"instagram@gmail.com", 
+                    "direccionEmpresa":"Estados Unidos", 
+                    "numeroTelefonicoEmpresa":99999999, 
+                    "status": "Activa", 
+                    "plan": "Mensual" 
+                } 
+            ] 
+        },
+        { 
+            "id":1, 
+            "nombre":"Cesar", 
+            "Apellido":"Nuñez", 
+            "correo":"Cesar@gmail.com", 
+            "pasword":"123456", 
+            "empresa": [ 
+                { 
+                    "NombreEmpresa": "Ford",
+                    "logoEmpresa":"/src/assets/img/logo-Google.png", 
+                    "descripcionEmpresa": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At augue eget arcu dictum varius duis at. Ipsum suspendisse ultrices gravida dictum. Donec adipiscing tristique risus nec feugiat in fermentum. ", 
+                    "correoEmpresa":"Ford@gmail.com", 
+                    "direccionEmpresa":"Estados Unidos", 
+                    "numeroTelefonicoEmpresa":99999999, 
+                    "status": "Activa", 
+                    "plan": "Mensual" 
+                } 
+            ] 
+        },
+        { 
+            "id":1, 
+            "nombre":"Anibal", 
+            "Apellido":"Reyes", 
+            "correo":"Anibal@gmail.com", 
+            "pasword":"123456", 
+            "empresa": [ 
+                { 
+                    "NombreEmpresa": "Tinder",
+                    "logoEmpresa":"/src/assets/img/logo-Google.png", 
+                    "descripcionEmpresa": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At augue eget arcu dictum varius duis at. Ipsum suspendisse ultrices gravida dictum. Donec adipiscing tristique risus nec feugiat in fermentum. ", 
+                    "correoEmpresa":"Tinder@gmail.com", 
+                    "direccionEmpresa":"Estados Unidos", 
+                    "numeroTelefonicoEmpresa":99999999, 
+                    "status": "Activa", 
+                    "plan": "Mensual" 
+                } 
+            ] 
         }
+        
 
     ], 
     "Administrador" : [ 
