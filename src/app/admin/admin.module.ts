@@ -6,6 +6,9 @@ import { HomeAdminComponent } from './home-admin/home-admin.component';
 import { MatButtonModule } from '@angular/material/button';
 import {MatGridListModule} from '@angular/material/grid-list';
 import { MatIconModule } from '@angular/material/icon';
+import {MatTableModule} from '@angular/material/table';
+import {MatListModule} from '@angular/material/list';
+import {MatFormFieldModule} from '@angular/material/form-field';
 
 
 @NgModule({
@@ -20,7 +23,10 @@ import { MatIconModule } from '@angular/material/icon';
     MatButtonModule,
     MatTabsModule,
     MatGridListModule,
-    MatIconModule
+    MatIconModule,
+    MatTableModule,
+    MatListModule,
+    MatFormFieldModule,
   ],
 
   exports: [
@@ -28,7 +34,10 @@ import { MatIconModule } from '@angular/material/icon';
     MatButtonModule,
     MatTabsModule,
     MatGridListModule,
-    MatIconModule
+    MatIconModule,
+    MatTableModule,
+    MatListModule,
+    MatFormFieldModule,
   ]
 })
 export class AdminModule { }

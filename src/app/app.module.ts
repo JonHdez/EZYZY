@@ -16,6 +16,9 @@ import { MatCardModule } from '@angular/material/card';
 import { HomeAdminComponent } from './admin/home-admin/home-admin.component';
 import {MatGridListModule} from '@angular/material/grid-list';
 import { MatIconModule } from '@angular/material/icon';
+import {MatTableModule} from '@angular/material/table';
+import {MatListModule} from '@angular/material/list';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -37,7 +40,10 @@ import { MatIconModule } from '@angular/material/icon';
     HttpClientModule,
     MatTabsModule,
     MatGridListModule,
-    MatIconModule
+    MatIconModule,
+    MatTableModule,
+    MatListModule,
+    FontAwesomeModule
   ],
   exports:[FooterComponent
   ],

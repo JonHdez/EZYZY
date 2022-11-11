@@ -79,22 +79,51 @@
 
     "Plan": [ 
         { 
-            "IdPlan":"", 
-            "tituloDePlan":"", 
-            "precioPlan":"", 
+            "IdPlan":1, 
+            "tituloDePlan":"Plan 1", 
+            "precioPlan":300, 
             "caracteristicas": [ 
-                { 
-                    "caracteristica1":"", 
-                    "caracteristica2":"", 
-                    "caracteristica3":"", 
-                    "caracteristica4":"", 
-                    "caracteristica5":"", 
-                    "caracteristica6":"", 
-                    "caracteristica7":"", 
-                    "caracteristica8":""
-                } 
-            ] 
-        } 
+                "Dominio Personalizado", 
+                "Dominio Gratis por un año", 
+                "Sertificado SSL", 
+                "Ancho de Banda de 1GB", 
+                "Espacio de Almacenamineto de 500mb", 
+                "1 Hora de Video", 
+                "100 Productos", 
+                "No se que mas poner"
+                ] 
+        },
+        { 
+            "IdPlan":2, 
+            "tituloDePlan":"Plan 2", 
+            "precioPlan":400, 
+            "caracteristicas": [ 
+                "Dominio Personalizado", 
+                "Dominio Gratis por un año", 
+                "Sertificado SSL", 
+                "Ancho de Banda de 1GB", 
+                "Espacio de Almacenamineto de 500mb", 
+                "1 Hora de Video", 
+                "100 Productos", 
+                "No se que mas poner"
+                ] 
+        },
+        { 
+            "IdPlan":3, 
+            "tituloDePlan":"Plan 3", 
+            "precioPlan":600, 
+            "caracteristicas": [ 
+                                "Dominio Personalizado", 
+                                "Dominio Gratis por un año", 
+                                "Sertificado SSL", 
+                                "Ancho de Banda de 1GB", 
+                                "Espacio de Almacenamineto de 500mb", 
+                                "1 Hora de Video", 
+                                "100 Productos", 
+                                "No se que mas poner"
+                                ] 
+        }
+
     ], 
 
     "Plantillas": [ 

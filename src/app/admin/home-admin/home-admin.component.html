@@ -17,12 +17,13 @@
                     <p class="nombreAdmin">{{administradores[0].nombre}} {{administradores[0].apellido}}</p>
                     <img src="../../../assets/img/fotoPerfil.webp" alt="">
                 </div>
-                <mat-tab-group color="primary" mat-align-tabs="center" class="tabs">
-                    <mat-tab label="Administracion de Plantillas">
+                <mat-tab-group  color="primary" mat-align-tabs="center" class="tabs">
+                    <mat-tab  label="Administracion de Plantillas">
                         <div class="plantillas">
                             <p class="plantillasTexto">Plantillas Disponibles</p>
                             <button class="btn-aggPlantilla" mat-raised-button color="primary">
-                               + Agragar Nueva Plantilla</button>
+                               Agragar Nueva Plantilla <fa-icon [icon]="faPlus"></fa-icon> 
+                            </button>
                         </div>
                         <div class="card-container">
                             <mat-card *ngFor="let plantilla of plantillas" class="card">
@@ -40,11 +41,98 @@
                         </div>                                  
                     </mat-tab>
         
-                    <mat-tab label="Gestion de Planes">Content 2
-        
+                    <mat-tab label="Gestion de Planes">
+                        <div class="plantillas">
+                            <p class="plantillasTexto">Planes Disponibles</p>
+                            <button class="btn-aggPlantilla" mat-raised-button color="primary">
+                                 Agragar Nuevo Plan <fa-icon [icon]="faPlus"></fa-icon> 
+                            </button>
+                        </div>
+                        <div class="tabla">
+                            <table mat-table id="tabla-planes" [dataSource]="planes" class="mat-elevation-z8 tabla-planes">
+                              
+                                <ng-container  matColumnDef="Tipo de Plan">
+                                  <th class="th" mat-header-cell *matHeaderCellDef> Tipo de Plan </th>
+                                  <td class="td" mat-cell *matCellDef="let plan">{{plan.tituloDePlan
+                                }} </td>
+                                </ng-container>
+                              
+                                <ng-container matColumnDef="Precio">
+                                  <th class="th" mat-header-cell *matHeaderCellDef> Precio </th>
+                                  <td class="td" mat-cell *matCellDef="let plan"> {{plan.precioPlan | currency
+                                }} </td>
+                                </ng-container>
+                              
+                                <ng-container  matColumnDef="Accion">
+                                  <th class="th" mat-header-cell *matHeaderCellDef> Accion </th>
+                                  <td class="td" mat-cell *matCellDef="let plan">
+                                    <div class="btns-accion">
+                                        <button mat-raised-button color="primary">
+                                            <fa-icon [icon]="faPenToSquare"></fa-icon> 
+                                        </button>
+                                        <button mat-raised-button color="primary">
+                                            <fa-icon [icon]="faTrash"></fa-icon> 
+                                        </button>
+                                    </div>
+                                  </td>
+                                </ng-container>
+                            
+                              
+                                <tr mat-header-row *matHeaderRowDef="columnasTablaPlan"></tr>
+                                <tr mat-row *matRowDef="let row; columns: columnasTablaPlan;"></tr>
+                              </table> 
+                        </div>
+                        <hr>
+                        <div class="card-planes-container">
+                            <mat-card class="card-planes">
+                                <div class="plan-muestra">
+                                    <mat-card class="muestra">
+                                        <p class="nombrePlan">{{planes[0].tituloDePlan}}</p>
+                                        <p class="precioPlan">{{planes[0].precioPlan | currency}} / mes</p>
+                                        <div class="list">
+                                            <mat-list role="list">
+                                                <mat-list-item  *ngFor="let item of planes[0].caracteristicas
+                                                " role="listitem">{{item}}</mat-list-item>
+                                            </mat-list>
+                                        </div>
+                                        <button mat-raised-button color="primary" class="btn-muestra">Elejir este Plan</button>
+                                    </mat-card>
+                                </div>
+                                <div class="modificar-plan">
+                                    <form class="example-form">
+                                        <mat-form-field class="example-full-width" appearance="fill">
+                                          <mat-label>Titulo del Plan</mat-label>
+                                          <input matInput>
+                                        </mat-form-field>
+
+                                        <mat-form-field class="example-full-width" appearance="fill">
+                                            <mat-label>Precio del Plan</mat-label>
+                                            <input matInput>
+                                        </mat-form-field>
+                                        
+                                        <div class="caracteristicas">
+                                            <mat-form-field class="example-full-width" appearance="fill">
+                                                <mat-label>Caracteristicas</mat-label>
+                                                <input matInput>
+                                            </mat-form-field>
+                                            <button class="btn-caracteristica" mat-raised-button color="primary" >
+                                                <fa-icon [icon]="faPlus"></fa-icon>
+                                            </button>
+                                        </div>
+                                        
+                                        <div class="btns-modificar">   
+                                            <button class="btn-guardar" mat-raised-button color="primary" >Guardar</button>
+    
+                                            <button class="btn-cancelar" mat-raised-button color="warn" >Cancelar</button>
+                                        </div>
+
+                                    </form> 
+                                </div>
+                            </mat-card>
+                        </div>
                     </mat-tab>
                     
-                    <mat-tab label="Gestion de Cuentas">Content 3
+                    <mat-tab label="Gestion de Cuentas">
         
                     </mat-tab>
                 </mat-tab-group> 

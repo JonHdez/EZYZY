@@ -9,6 +9,148 @@ body {
     min-height: 100vh;
 
 }
+.th {
+    text-align: center ;
+    color: #FFFFFF;
+    padding-top: 20px;
+    font-size: medium;
+}
+
+.td {
+    text-align: center ;
+    color: #FFFFFF;
+    padding-top: 5px;
+
+}
+
+
+
+div.btns-accion {
+    display: flex;
+    justify-content: center;
+
+    button {
+        background-color: #FFFFFF !important;
+        color: $azulAlerta;
+        margin-right: 8px;
+        width: 10% !important;
+        height: 35px;
+
+    }
+}
+
+.modificar-plan {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 40%;
+}
+
+div.caracteristicas {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 30px;
+
+
+    mat-form-field{
+        width: 100%;
+
+    }
+
+    button {
+        background-color: $azulAlerta !important;
+        height: 50px;
+    }
+    
+}
+
+
+div.btns-modificar {
+
+    button{
+        background-color: $azulAlerta !important;
+        border-radius: 25px;
+        width: 40%;
+        height: 50px;
+    }
+    
+    display: flex;
+    justify-content: space-around;
+}
+
+.example-form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.card-planes-container {
+    padding: 50px;
+}
+
+.list{
+    background-color: #FFFFFF;
+}
+
+.plan-muestra {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+hr {border: 2px solid $azulProfundo; height: 2px; background-color: $azulSecundario;}
+
+.precioPlan {
+    font-size: xx-large;
+    margin-bottom: 40px;
+}
+
+.nombrePlan {
+    font-size: x-large;
+    margin-bottom: 40px;
+}
+
+.btn-muestra {
+    border-radius: 25px ;
+    margin: auto;
+    margin-top: 40px;
+    height: 50px;
+    width: 90%;
+    background-color: $azulAlerta !important;
+}
+
+.muestra {
+    background-color: $azulTerciario;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 45px;
+    color: #FFFFFF;
+}
+
+.card-planes {
+    background-color: $azulClaro;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    border-radius: 25px;
+    text-align: center;
+
+}
+
+
+.tabla-planes {
+
+    background-color: $azulCuaternario;
+    width: 100%;
+    color: #FFFFFF !important;
+}
+
+.tabla {
+    display: flex;
+    justify-content: center;
+    padding: 25px;
+}
 
 .plantillas {
     display: flex;
@@ -44,8 +186,8 @@ h1 {
     text-align: start;
     margin-top: 35px;
     margin-left: 45px ;
-
 }
+
 .card-administrador {
     background-color: $azulProfundo;
     width: 90%;
