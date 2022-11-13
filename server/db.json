@@ -28,9 +28,9 @@
     "Empresa" : [ 
         { 
             "id":1, 
-            "nombre":"Kevin", 
-            "Apellido":"Torres", 
-            "correo":"Kevin@gmail.com", 
+            "nombre":"Keiry", 
+            "Apellido":"Ardon", 
+            "correo":"Keiry@gmail.com", 
             "pasword":"123456", 
             "empresa": [ 
                 { 
@@ -41,7 +41,9 @@
                     "direccionEmpresa":"Estados Unidos", 
                     "numeroTelefonicoEmpresa":99999999, 
                     "status": "Activa", 
-                    "plan": "Mensual" 
+                    "plan": "Mensual",
+                    "mision" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At augue eget arcu dictum varius duis at. Ipsum suspendisse ultrices gravida dictum. Donec adipiscing tristique risus nec feugiat in fermentum. ",
+                    "vision": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At augue eget arcu dictum varius duis at. Ipsum suspendisse ultrices gravida dictum. Donec adipiscing tristique risus nec feugiat in fermentum. "
                 } 
             ] 
         },
@@ -60,15 +62,17 @@
                     "direccionEmpresa":"Estados Unidos", 
                     "numeroTelefonicoEmpresa":99999999, 
                     "status": "Activa", 
-                    "plan": "Mensual" 
+                    "plan": "Mensual",
+                    "mision" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At augue eget arcu dictum varius duis at. Ipsum suspendisse ultrices gravida dictum. Donec adipiscing tristique risus nec feugiat in fermentum. ",
+                    "vision": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At augue eget arcu dictum varius duis at. Ipsum suspendisse ultrices gravida dictum. Donec adipiscing tristique risus nec feugiat in fermentum. "
                 } 
             ] 
         },
         { 
             "id":3, 
-            "nombre":"Keiry", 
-            "Apellido":"Sevilla", 
-            "correo":"Keiry@gmail.com", 
+            "nombre":"Kevin", 
+            "Apellido":"Torres", 
+            "correo":"Kevin@gmail.com", 
             "pasword":"123456", 
             "empresa": [ 
                 { 
@@ -79,7 +83,9 @@
                     "direccionEmpresa":"Estados Unidos", 
                     "numeroTelefonicoEmpresa":99999999, 
                     "status": "Activa", 
-                    "plan": "Mensual" 
+                    "plan": "Mensual",
+                    "mision" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At augue eget arcu dictum varius duis at. Ipsum suspendisse ultrices gravida dictum. Donec adipiscing tristique risus nec feugiat in fermentum. ",
+                    "vision": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At augue eget arcu dictum varius duis at. Ipsum suspendisse ultrices gravida dictum. Donec adipiscing tristique risus nec feugiat in fermentum. "
                 } 
             ] 
         },
@@ -98,7 +104,9 @@
                     "direccionEmpresa":"Estados Unidos", 
                     "numeroTelefonicoEmpresa":99999999, 
                     "status": "Activa", 
-                    "plan": "Mensual" 
+                    "plan": "Mensual" ,
+                    "mision" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At augue eget arcu dictum varius duis at. Ipsum suspendisse ultrices gravida dictum. Donec adipiscing tristique risus nec feugiat in fermentum. ",
+                    "vision": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At augue eget arcu dictum varius duis at. Ipsum suspendisse ultrices gravida dictum. Donec adipiscing tristique risus nec feugiat in fermentum. "
                 } 
             ] 
         },
@@ -117,7 +125,9 @@
                     "direccionEmpresa":"Estados Unidos", 
                     "numeroTelefonicoEmpresa":99999999, 
                     "status": "Activa", 
-                    "plan": "Mensual" 
+                    "plan": "Mensual" ,
+                    "mision" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At augue eget arcu dictum varius duis at. Ipsum suspendisse ultrices gravida dictum. Donec adipiscing tristique risus nec feugiat in fermentum. ",
+                    "vision": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At augue eget arcu dictum varius duis at. Ipsum suspendisse ultrices gravida dictum. Donec adipiscing tristique risus nec feugiat in fermentum. "
                 } 
             ] 
         }
@@ -225,6 +235,80 @@
             "codigohtml":"/", 
             "css":"/" 
         }
-    ] 
+    ],
+
+    "Productos" : [
+        {
+            "id": 1,
+            "nombreProducto" : "Producto 1",
+            "cantidad": 5,
+            "precio": 500,
+            "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At augue eget arcu dictum varius duis at. Ipsum suspendisse ultrices gravida dictum. Donec adipiscing tristique risus nec feugiat in fermentum."
+        },
+        {
+            "id": 2,
+            "nombreProducto" : "Producto 2",
+            "cantidad": 5,
+            "precio": 600,
+            "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At augue eget arcu dictum varius duis at. Ipsum suspendisse ultrices gravida dictum. Donec adipiscing tristique risus nec feugiat in fermentum."
+        },
+        {
+            "id": 3,
+            "nombreProducto" : "Producto 3",
+            "cantidad": 5,
+            "precio": 200,
+            "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At augue eget arcu dictum varius duis at. Ipsum suspendisse ultrices gravida dictum. Donec adipiscing tristique risus nec feugiat in fermentum."
+        },
+        {
+            "id": 4,
+            "nombreProducto" : "Producto 4",
+            "cantidad": 5,
+            "precio": 150,
+            "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At augue eget arcu dictum varius duis at. Ipsum suspendisse ultrices gravida dictum. Donec adipiscing tristique risus nec feugiat in fermentum."
+        },
+        {
+            "id": 5,
+            "nombreProducto" : "Producto 5",
+            "cantidad": 5,
+            "precio": 700,
+            "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At augue eget arcu dictum varius duis at. Ipsum suspendisse ultrices gravida dictum. Donec adipiscing tristique risus nec feugiat in fermentum."
+        },
+        {
+            "id": 6,
+            "nombreProducto" : "Producto 6",
+            "cantidad": 5,
+            "precio": 1000,
+            "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At augue eget arcu dictum varius duis at. Ipsum suspendisse ultrices gravida dictum. Donec adipiscing tristique risus nec feugiat in fermentum."
+        },
+        {
+            "id": 7,
+            "nombreProducto" : "Producto 7",
+            "cantidad": 5,
+            "precio": 100,
+            "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At augue eget arcu dictum varius duis at. Ipsum suspendisse ultrices gravida dictum. Donec adipiscing tristique risus nec feugiat in fermentum."
+        },
+        {
+            "id": 8,
+            "nombreProducto" : "Producto 8",
+            "cantidad": 5,
+            "precio": 550,
+            "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At augue eget arcu dictum varius duis at. Ipsum suspendisse ultrices gravida dictum. Donec adipiscing tristique risus nec feugiat in fermentum."
+        },
+        {
+            "id": 9,
+            "nombreProducto" : "Producto 9",
+            "cantidad": 5,
+            "precio": 300,
+            "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At augue eget arcu dictum varius duis at. Ipsum suspendisse ultrices gravida dictum. Donec adipiscing tristique risus nec feugiat in fermentum."
+        },
+        {
+            "id": 10,
+            "nombreProducto" : "Producto 10",
+            "cantidad": 5,
+            "precio": 250,
+            "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At augue eget arcu dictum varius duis at. Ipsum suspendisse ultrices gravida dictum. Donec adipiscing tristique risus nec feugiat in fermentum."
+        }
+
+    ]
 
 }

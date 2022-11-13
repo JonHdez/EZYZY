@@ -19,13 +19,17 @@ import { MatIconModule } from '@angular/material/icon';
 import {MatTableModule} from '@angular/material/table';
 import {MatListModule} from '@angular/material/list';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { PerfilEmpresaComponent } from './empresa/perfil-empresa/perfil-empresa.component';
+import { NgChartsModule } from 'ng2-charts';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     FooterComponent,
     LoginClienteComponent,
-    HomeAdminComponent
+    HomeAdminComponent,
+    PerfilEmpresaComponent
   ],
   imports: [
     BrowserModule,
@@ -43,7 +47,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     MatIconModule,
     MatTableModule,
     MatListModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    NgChartsModule 
   ],
   exports:[FooterComponent
   ],

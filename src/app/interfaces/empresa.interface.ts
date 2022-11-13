@@ -13,7 +13,9 @@ export interface Empresa {
             direccionEmpresa:string; 
             numeroTelefonicoEmpresa:number; 
             status: true; 
-            plan: string
+            plan: string;
+            mision:string;
+            vision:string;
         }
     ]
 }

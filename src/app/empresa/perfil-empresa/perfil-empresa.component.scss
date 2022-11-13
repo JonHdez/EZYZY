@@ -1,0 +1,145 @@
+@import "/src/styles.scss";
+hr {border: 2px solid $azulProfundo; height: 2px; background-color: $azulSecundario;}
+
+body{
+    background-color: $azulCuaternario;
+    width: auto;
+    height: auto;
+    padding: 45px;
+}
+.img-empresa {
+    width: 50%;
+}
+
+div.perfil-empresa {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    color: #FFFFFF;
+    text-align: center;
+    margin-bottom: 15px;
+    
+    P{
+        margin-bottom: 20px;
+    }
+
+    .info {
+        font-size: large;
+    }
+
+    .saludoCliente {
+        font-size: x-large;
+    }
+
+    .nombreEmpresa {
+        font-size: 60px;
+    }
+
+    button {
+        background-color: $azulProfundo;
+        width: 80%;
+        height: 50px;
+        border-radius: 25px;
+        margin-top: 25px;
+        font-size: large;
+    }
+}
+
+div.descripcion-empresa {
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+
+    .descripcion {
+        font-size: medium;
+        margin-top: 25px;
+        p {
+            padding: 20px;
+            padding-top: 0%;
+        }
+
+        .d{ 
+            font-size: xx-large;
+            padding-bottom: 10px;
+        }
+    }
+
+    .mision-vision {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin-bottom: 15px;
+
+        .m-s {
+            font-size: x-large;
+            padding-bottom: 10px;
+        }
+        .mision {
+            padding: 20px;
+        }
+        .vision {
+            padding: 20px;
+        }
+        
+        p {
+            font-size: medium;
+        }
+    } 
+}
+
+mat-tab-group {
+    margin-top: 25px;
+}
+
+div.tabla {
+    display: flex;
+    justify-content: center;
+    padding: 25px;
+
+    .tabla-productos {
+        background-color: $azulCuaternario;
+        width: 80%;
+        color: #FFFFFF !important;
+    }
+
+    .th {
+        text-align: center ;
+        color: #FFFFFF;
+        padding-top: 20px;
+        font-size: medium;
+    }
+    
+    .td {
+        text-align: center ;
+        color: #FFFFFF;
+        padding-top: 5px;
+    }
+
+    div.btns-accion {
+        display: flex;
+        justify-content: center;
+    
+        button {
+            background-color: #FFFFFF !important;
+            color: $azulAlerta;
+            margin-right: 8px;
+            width: 10% !important;
+            height: 35px;
+    
+        }
+    }
+}
+
+div.graficas {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 30px;
+    background-color: #FFFFFF;
+    border-radius: 30px;
+    padding: 15px;
+    
+    .grafica-ventas {
+        color: #FFFFFF !important;
+    }
+}
