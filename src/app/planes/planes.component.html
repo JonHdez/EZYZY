@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planes</title>
+</head>
+<body>
+    <app-navbar></app-navbar>
+    <br>
+    <br>
+    <div class="containerGlobalTarjetas">
+        <mat-card class="tarjetaExterior">
+            <mat-card class="tarjetaInterior">
+                <br>
+                <mat-card-title id="tituloTarjeta">Selección de plan</mat-card-title>
+                <hr class="dividerTitulo">
+                <div class="containerTarjetas">
+                    <br>
+                    <br>
+                    <app-tarjetas-plan class="appTarjetas">
+                    </app-tarjetas-plan>
+                </div>
+            </mat-card>
+        </mat-card>
+        <br>
+    </div>
+    <app-footer></app-footer>
+</body>
+</html>

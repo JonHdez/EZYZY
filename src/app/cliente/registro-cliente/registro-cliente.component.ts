@@ -1,7 +1,4 @@
-import { ClientesService } from './../../services/clientes.service';
 import { Component, OnInit } from '@angular/core';
-import {Cliente} from 'src/app/interfaces/cliente.interface';
-import {tap} from 'rxjs/operators';
 import {FormControl, FormGroupDirective, NgForm, Validators} from '@angular/forms';
 import {ErrorStateMatcher} from '@angular/material/core';
 
@@ -13,33 +10,25 @@ export class MyErrorStateMatcher implements ErrorStateMatcher {
   }
 }
 
-@Component({
-  selector: 'app-login-cliente',
-  templateUrl: './login-cliente.component.html',
-  styleUrls: ['./login-cliente.component.scss']
-})
-export class LoginClienteComponent implements OnInit {
-  minPw = 8;
-  clientes!: Cliente[];
-  constructor(private clienteSvc:ClientesService) { }
 
-  hide = true;
+@Component({
+  selector: 'app-registro-cliente',
+  templateUrl: './registro-cliente.component.html',
+  styleUrls: ['./registro-cliente.component.scss']
+})
+export class RegistroClienteComponent implements OnInit {
+  minPw = 8;
+  maxN=20;
+  constructor() { }
+
+  apellido= new FormControl('', [Validators.required, Validators.maxLength(this.maxN)]);
+  nombre= new FormControl('', [Validators.required, Validators.maxLength(this.maxN)]);
   password= new FormControl('', [Validators.required, Validators.minLength(this.minPw)]);
   emailFormControl = new FormControl('', [Validators.required, Validators.email]);
 
   matcher = new MyErrorStateMatcher();
 
   ngOnInit(): void {
-    this.clienteSvc.getClientes().pipe(
-      tap((clientes:Cliente[]) => {
-        this.clientes = clientes
-        console.log(this.clientes)
-
-      }
-      )
-    )
-    .subscribe();
-
   }
-}
 
+}

@@ -193,6 +193,76 @@
         }
 
     ], 
+    "Plan2": [ 
+        { 
+            "IdPlan":"1000", 
+            "tituloDePlan":"Plan Gratuito", 
+            "precioPlan":"0 $/mes", 
+            "caracteristicas": [ 
+                { 
+                    "caracteristica1":"Dominio personalizado", 
+                    "caracteristica2":"Dominio Gratis por 1 año", 
+                    "caracteristica3":"Certificado de SSL", 
+                    "caracteristica4":"Ancho de Banda de 1Gb", 
+                    "caracteristica5":"Espacio de almacenamiento 500Mb", 
+                    "caracteristica6":"1 Hora de video", 
+                    "caracteristica7":"100 productos", 
+                    "caracteristica8":""
+                } 
+            ] 
+        },
+        { 
+            "IdPlan":"1002", 
+            "tituloDePlan":"Plan Basico", 
+            "precioPlan":"5 $/mes", 
+            "caracteristicas": [ 
+                { 
+                    "caracteristica1":"Dominio personalizado incluido", 
+                    "caracteristica2":"Dominio Gratis por 1 año", 
+                    "caracteristica3":"Certificado de SSL", 
+                    "caracteristica4":"Ancho de Banda de 1Gb", 
+                    "caracteristica5":"Espacio de almacenamiento 500Mb", 
+                    "caracteristica6":"1 Hora de video", 
+                    "caracteristica7":"100 productos", 
+                    "caracteristica8":""
+                } 
+            ] 
+        },
+        { 
+            "IdPlan":"1003", 
+            "tituloDePlan":"Plan Profesional", 
+            "precioPlan":"8 $/mes", 
+            "caracteristicas": [ 
+                { 
+                    "caracteristica1":"Dominio personalizado incluido", 
+                    "caracteristica2":"Dominio Gratis por 1 año", 
+                    "caracteristica3":"Certificado de SSL", 
+                    "caracteristica4":"Ancho de Banda de 1Gb", 
+                    "caracteristica5":"Espacio de almacenamiento 500Mb", 
+                    "caracteristica6":"1 Hora de video", 
+                    "caracteristica7":"100 productos", 
+                    "caracteristica8":""
+                } 
+            ] 
+        },
+        { 
+            "IdPlan":"1004", 
+            "tituloDePlan":"Plan Profesional Plus", 
+            "precioPlan":"10 $/mes", 
+            "caracteristicas": [ 
+                { 
+                    "caracteristica1":"Dominio personalizado incluido", 
+                    "caracteristica2":"Dominio Gratis por 1 año", 
+                    "caracteristica3":"Certificado de SSL", 
+                    "caracteristica4":"Ancho de Banda de 1Gb", 
+                    "caracteristica5":"Espacio de almacenamiento 500Mb", 
+                    "caracteristica6":"1 Hora de video", 
+                    "caracteristica7":"100 productos", 
+                    "caracteristica8":""
+                } 
+            ] 
+        } 
+    ],
 
     "Plantillas": [ 
         { 

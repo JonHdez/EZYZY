@@ -5,13 +5,12 @@ import {MatTabsModule} from '@angular/material/tabs';
 import {MatTableModule} from '@angular/material/table';
 import { NgChartsModule } from 'ng2-charts';
 
+import { EdicionPaginaEmpresaComponent } from './edicion-pagina-empresa/edicion-pagina-empresa.component';
 
 
 
 @NgModule({
-  declarations: [
-    PerfilEmpresaComponent
-  ],
+  declarations: [],
   imports: [
     CommonModule,
     MatTabsModule,

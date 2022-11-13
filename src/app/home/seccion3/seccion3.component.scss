@@ -1,0 +1,82 @@
+@import '../../../styles.scss';
+
+.titulo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.containerSeccion3{
+    display: flex;
+    flex-direction: column;
+    background-color: #003664;
+    align-content: space-between;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#containerDescuento{
+    background-color: $azulProfundo;
+}
+
+.containerDescuentoS3{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    width: 600px;
+}
+
+.imagenDescuento{
+    width: 250px;
+    height: 100px;
+    object-fit:scale-down;
+}
+
+h1{
+    font-style: italic;
+    font-weight: 600;
+    font-size: larger;
+    color: $hueso;
+    margin-right: 10px;
+}
+
+h2{
+    font-style: italic;
+    font-weight:400;
+    font-size: smaller;
+    color: black;
+}
+h3{
+    font-style: italic;
+    font-weight:400;
+    font-size: smaller;
+    color: $hueso;
+}
+
+h3:hover{
+    cursor: pointer;
+}
+
+h4{
+    font-style: italic;
+    font-weight: 600;
+    font-size: larger;
+    color: black;
+    margin-right: 10px;
+}
+
+.botonDescuento{
+    color: $hueso;
+    background-color: $azulClaro;
+
+}

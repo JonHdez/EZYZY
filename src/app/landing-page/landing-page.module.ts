@@ -14,7 +14,7 @@ import {MatButtonModule} from '@angular/material/button';
     CommonModule,
     MatToolbarModule,
     MatButtonModule,
-    RouterModule
+    RouterModule,
   ],
   exports:[
     LandingPageComponent

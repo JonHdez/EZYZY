@@ -8,33 +8,49 @@
 </head>
 <body>
     <div class="containerLoginCliente">
-        <img id="logoLoginCliente" src="../../../assets/img/Logo.png" alt="">
+        <img id="logoLoginCliente" src="../../../assets/img/Logo.png" alt="" [routerLink]="['/']">
         <div class="containerInfo">
             <mat-card class="cardIniciarSesion">
                 <div class="containerTitulos">
-                    <h1>Iniciar Sesion</h1>
-                    <h3>No tienes cuenta?</h3>
-                    <h2>Registrate</h2>
+                    <h1>Iniciar sesión</h1>
+                    <h3>¿No tienes cuenta?</h3>
+                    <h2 [routerLink]="['/registroCliente']">Regístrate</h2>
                 </div>
             <div class="containerBotones">
                 <button id="botonFB" mat-button >Continuar con Facebook</button>
                 <button id="botonGoogle" mat-button >Continuar con Google</button>
             </div>
             <div class="formulario">
-                <mat-form-field>
-                    <mat-label>Correo Electronico</mat-label>
-                    <input matInput type="email" placeholder="Ingrese su correo" required id="correoElectronico">
-                </mat-form-field>
-                <mat-form-field>
-                    <mat-label>Contraseña</mat-label>
-                    <input matInput type="password" placeholder="Ingrese su contraseña" required id="contraseña">
+                <mat-form-field class="example-full-width">
+                    <mat-label>Ingresa tu Correo Electrónico</mat-label>
+                    <input type="email" matInput [formControl]="emailFormControl" [errorStateMatcher]="matcher"
+                           placeholder="Ej. JuanR@ejemplo.com">
+                    <mat-hint>Ingrese Correo Válido</mat-hint>
+                    <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+                      Por favor registre un correo válido
+                    </mat-error>
+                    <mat-error *ngIf="emailFormControl.hasError('required')">
+                      El correo es <strong>requerido</strong>
+                    </mat-error>
+                  </mat-form-field>
+                  <mat-form-field>
+                    <mat-label>Ingresa tu Contraseña</mat-label>
+                    <input type="passowrd" matInput [formControl]="password" [errorStateMatcher]="matcher">
+                    <mat-hint>Ingrese Contraseña valuida</mat-hint>
+                    <mat-error *ngIf="!password.hasError('required')">
+                      Por favor ingrese contraseña valida
+                    </mat-error>
+                    <mat-error *ngIf="password.hasError('required')">
+                      La contraseña es <strong>requerida</strong>
+                    </mat-error>
                 </mat-form-field>
             </div>
             <div class="containerBotonIniciarSesion">
-                <button mat-button id="botonIniciarSesionCliente">Iniciar Sesion</button>
+                <button mat-button id="botonIniciarSesionCliente">Iniciar sesión</button>
             </div>
             </mat-card>
         </div>
     </div>
+    <app-footer></app-footer>
 </body>
 </html>
