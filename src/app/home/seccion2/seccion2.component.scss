@@ -1,0 +1,48 @@
+@import '../../../styles.scss';
+
+.containerseccion2{
+    background-color: $azulClaro;
+}
+
+#containerNuevasPlantillas{
+    margin: 5px 45px 5px 45px;
+}
+
+#columnaChica{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 3px 3px 3px 3px;
+}
+
+.row{
+    justify-content: center;
+}
+
+.titulo{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 230px;
+}
+
+h1{
+    font-style: italic;
+    font-weight: 600;
+    font-size: larger;
+    color: $azulProfundo;
+    margin-right: 10px;
+}
+
+h3{
+    font-style: italic;
+    font-weight:400;
+    font-size: smaller;
+    color: $azulProfundo;
+}
+
+h3:hover{
+    cursor: pointer;
+}

@@ -12,9 +12,9 @@
         <div class="containerInfo">
             <mat-card class="cardRegistro">
                 <div class="containerTitulos">
-                    <h1>Registrate</h1>
-                    <h3>Ya tienes cuenta?</h3>
-                    <h2 [routerLink]="['/loginCliente']">Inicia Sesion</h2>
+                    <h1>Regístrate</h1>
+                    <h3>¿Ya tienes cuenta?</h3>
+                    <h2 [routerLink]="['/loginCliente']">Inicia sesión</h2>
                 </div>
             <div class="containerBotones">
                 <button id="botonFB" mat-button >Continuar con Facebook</button>
@@ -24,24 +24,24 @@
                 <div class="columna1">
                     <mat-form-field>
                         <mat-label>Primer Nombre</mat-label>
-                        <input matInput placeholder="Ingrese su primer nombre" required id="primerNombre">
+                        <input matInput placeholder="Ingrese su primer nombre" required id="primerNombre" [formControl]="nombre" [errorStateMatcher]="matcher">
                     </mat-form-field>
                 </div>
                 <div class="columna2">
                     <mat-form-field>
                         <mat-label>Primer Apellido</mat-label>
-                        <input matInput placeholder="Ingrese su primer Apellido" required id="primerApellido">
+                        <input matInput placeholder="Ingrese su primer Apellido" required id="primerApellido" [formControl]="apellido" [errorStateMatcher]="matcher">
                     </mat-form-field>
                 </div>
                 <div class="columna1">
                     <form class="example-form">
                         <mat-form-field class="example-full-width" >
-                          <mat-label>Correo Electronico</mat-label>
+                          <mat-label>Correo Electrónico</mat-label>
                           <input type="email" matInput [formControl]="emailFormControl" [errorStateMatcher]="matcher"
                                  placeholder="Ej. JuanR@ejemplo.com">
-                          <mat-hint>Ingrese Correo Valido</mat-hint>
+                          <mat-hint>Ingrese Correo Válido</mat-hint>
                           <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
-                            Por favor registre un correo valido
+                            Por favor registre un correo válido
                           </mat-error>
                           <mat-error *ngIf="emailFormControl.hasError('required')">
                             El correo es <strong>requerido</strong>
@@ -53,12 +53,12 @@
                 <div class="columna2">
                     <form class="example-form">
                         <mat-form-field class="example-full-width">
-                          <mat-label>Ingresa tu Correo Electronico nuevamente</mat-label>
+                          <mat-label>Ingresa tu Correo Electrónico nuevamente</mat-label>
                           <input type="email" matInput [formControl]="emailFormControl" [errorStateMatcher]="matcher"
                                  placeholder="Ej. JuanR@ejemplo.com">
-                          <mat-hint>Ingrese Correo Valido</mat-hint>
+                          <mat-hint>Ingrese Correo Válido</mat-hint>
                           <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
-                            Por favor registre un correo valido
+                            Por favor registre un correo válido
                           </mat-error>
                           <mat-error *ngIf="emailFormControl.hasError('required')">
                             El correo es <strong>requerido</strong>
@@ -68,19 +68,33 @@
                 </div>
                 <div class="columna1">
                     <mat-form-field>
-                        <mat-label>Contraseña</mat-label>
-                        <input matInput type="password" placeholder="Ingrese su contraseña" required id="contraseña">
+                        <mat-label>Ingresa tu Contraseña</mat-label>
+                        <input type="password" matInput [formControl]="password" [errorStateMatcher]="matcher">
+                        <mat-hint>Ingrese Contraseña valuida</mat-hint>
+                        <mat-error *ngIf="!password.hasError('required')">
+                          Por favor ingrese contraseña valida
+                        </mat-error>
+                        <mat-error *ngIf="password.hasError('required')">
+                          La contraseña es <strong>requerida</strong>
+                        </mat-error>
                     </mat-form-field>
                 </div>
                 <div class="columna2">
                     <mat-form-field>
-                        <mat-label>Ingrese la Contraseña nuevamente</mat-label>
-                        <input matInput type="password" placeholder="Ingrese su contraseña" required id="contraseña">
+                        <mat-label>Ingresa tu Contraseña nuevamente</mat-label>
+                        <input type="password" matInput [formControl]="password" [errorStateMatcher]="matcher">
+                        <mat-hint>Ingrese Contraseña valuida</mat-hint>
+                        <mat-error *ngIf="!password.hasError('required')">
+                          Por favor ingrese contraseña valida
+                        </mat-error>
+                        <mat-error *ngIf="password.hasError('required')">
+                          La contraseña es <strong>requerida</strong>
+                        </mat-error>
                     </mat-form-field>
                 </div>
             </div>
             <div class="containerBotonRegistrate">
-                <button mat-button id="botonRegistrateCliente">Registrate</button>
+                <button mat-button id="botonRegistrateCliente">Regístrate</button>
             </div>
             </mat-card>
         </div>

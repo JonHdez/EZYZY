@@ -1,3 +1,7 @@
+import { MatDividerModule } from '@angular/material/divider';
+import { Seccion2Component } from './home/seccion2/seccion2.component';
+import { CarruselComponent } from './home/carrusel/carrusel.component';
+import { HomeComponent } from './home/home/home.component';
 import { MatMenuModule } from '@angular/material/menu';
 import { RegistroClienteComponent } from './cliente/registro-cliente/registro-cliente.component';
 import { MatButtonModule } from '@angular/material/button';
@@ -18,6 +22,10 @@ import { FooterComponent } from './footer/footer.component';
 import { MatCardModule } from '@angular/material/card';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NavbarComponent } from './navbar/navbar.component';
+import { TarjetasPlanComponent } from './tarjetas-plan/tarjetas-plan.component';
+import { PlanesComponent } from './planes/planes.component';
+import { TarjetasComponent } from './tarjetas/tarjetas.component';
+import { Seccion3Component } from './home/seccion3/seccion3.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +34,13 @@ import { NavbarComponent } from './navbar/navbar.component';
     LoginClienteComponent,
     RegistroClienteComponent,
     NavbarComponent,
+    TarjetasPlanComponent,
+    PlanesComponent,
+    HomeComponent,
+    CarruselComponent,
+    Seccion2Component,
+    Seccion3Component,
+    TarjetasComponent
   ],
   imports: [
     BrowserModule,
@@ -39,7 +54,8 @@ import { NavbarComponent } from './navbar/navbar.component';
     MatButtonModule,
     MatMenuModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    MatDividerModule
   ],
   exports:[FooterComponent,
     NavbarComponent

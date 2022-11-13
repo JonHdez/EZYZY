@@ -16,9 +16,37 @@
     object-fit: scale-down;
 }
 
+.logoMenu:hover{
+    cursor: pointer;
+}
+
 .botonesNav{
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
+}
+
+.vl {
+    border-left: 1px solid black;
+    height: 20px;;
+}
+
+.usuario{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.usuarioNombre{
+    margin-right: 5px;
+}
+
+#propic{
+    vertical-align: middle;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin: 0 5px 0 5px;
 }

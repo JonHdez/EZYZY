@@ -10,15 +10,20 @@ export class MyErrorStateMatcher implements ErrorStateMatcher {
   }
 }
 
+
 @Component({
   selector: 'app-registro-cliente',
   templateUrl: './registro-cliente.component.html',
   styleUrls: ['./registro-cliente.component.scss']
 })
 export class RegistroClienteComponent implements OnInit {
-
+  minPw = 8;
+  maxN=20;
   constructor() { }
 
+  apellido= new FormControl('', [Validators.required, Validators.maxLength(this.maxN)]);
+  nombre= new FormControl('', [Validators.required, Validators.maxLength(this.maxN)]);
+  password= new FormControl('', [Validators.required, Validators.minLength(this.minPw)]);
   emailFormControl = new FormControl('', [Validators.required, Validators.email]);
 
   matcher = new MyErrorStateMatcher();

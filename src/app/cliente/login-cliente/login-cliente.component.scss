@@ -16,10 +16,15 @@
     align-items: center;
 }
 
+
 #logoLoginCliente{
     width: 300px;
     height: 300px;
     object-fit: cover;
+}
+
+#logoLoginCliente:hover{
+    cursor: pointer;
 }
 
 .containerInfo{
@@ -43,6 +48,7 @@
 }
 
 h1{
+    font-style: italic;
     font-size: 30px;
     font-weight:600;
     color: $azulProfundo;
@@ -87,10 +93,11 @@ h2:hover{
 
 
 #botonIniciarSesionCliente{
+    font-style: italic;
     margin-top: 30px;
     background-color: white;
-    color: $azulTerciario;
-    font-weight: 600;
+    color: $azulSecundario;
+    font-weight: 900;
     border-radius: 20px;
     border-style: solid !important;
     border: 1px;

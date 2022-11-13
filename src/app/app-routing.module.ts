@@ -1,3 +1,6 @@
+import { HomeComponent } from './home/home/home.component';
+import { PlanesComponent } from './planes/planes.component';
+import { Plan } from './interfaces/plan.interface';
 import { RegistroClienteComponent } from './cliente/registro-cliente/registro-cliente.component';
 import { LandingPageComponent } from './landing-page/landing-page/landing-page.component';
 import { NgModule } from '@angular/core';
@@ -14,7 +17,13 @@ const routes: Routes = [
   },
   {
     path: 'registroCliente', component:RegistroClienteComponent
-  }
+  },
+  {
+    path: 'planes', component: PlanesComponent
+  },
+  {
+    path: 'home', component: HomeComponent
+  },
 ];
 
 @NgModule({

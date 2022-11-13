@@ -1,0 +1,43 @@
+@import '../../styles.scss';
+
+.planesTarjeta{
+    margin: 0 4px 0 4px;
+    width:fit-content;
+    background-color: $azulCuaternario;
+    border-radius: 20px;
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+::ng-deep .mat-card-header-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0px;
+ }
+
+#tituloTarjeta{
+    color: white;
+    font-weight: bold;
+}
+#subtituloTarjeta{
+    color: white;
+    font-weight: 400;
+}
+
+.botonPlan{
+    border-radius: 20px;
+    color: white;
+    background-color: $azulAlerta;
+}
+
+li{
+    margin: 5px 0 5px 0;
+    font-size: xx-small;
+}
+
+#tarjetaCaracteristicasPrecio{
+    width: 100px;
+    height: fit-content;
+}

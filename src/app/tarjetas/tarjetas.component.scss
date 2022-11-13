@@ -1,0 +1,37 @@
+@import '../../styles.scss';
+
+#botonTarjetaPlantilla{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: $hueso;
+    color: $azulProfundo;
+    margin: 2px 2px 5px 2px;
+    width: 50px;
+    height: 20px;
+}
+
+#tarjetaInfo{
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 5px;
+}
+
+.botonTarjeta{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-right: 5px;
+}
+
+#tarjetaCuerpoInfo{
+    background-color: $azulProfundo;
+    color: $hueso;
+}
+
+h6{
+    font-weight: 100;
+    font-size: small;
+}

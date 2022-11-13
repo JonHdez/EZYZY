@@ -42,6 +42,7 @@
 }
 
 h1{
+    font-style: italic;
     font-size: 30px;
     font-weight:600;
     color: $azulProfundo;
@@ -88,6 +89,7 @@ h2:hover{
     margin-top: 30px;
     background-color: white;
     color: $azulTerciario;
+    font-style: italic;
     font-weight: 600;
     border-radius: 20px;
     border-style: solid !important;
