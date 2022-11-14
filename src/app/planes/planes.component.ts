@@ -14,7 +14,7 @@ export class PlanesComponent implements OnInit {
   constructor(private planesSvc:PlansService) { }
 
   ngOnInit() {
-    this.planesSvc.getPlans().pipe(
+    this.planesSvc.getPlanes().pipe(
       tap((planes:Plan[])=>{
         this.planes = planes
         console.log(this.planes)

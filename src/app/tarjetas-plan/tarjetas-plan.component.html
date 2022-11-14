@@ -1,39 +1,14 @@
 <mat-card class="planesTarjeta" *ngFor="let plan of planes">
     <mat-card-header class="headerTarjeta">
         <mat-card-subtitle id="subtituloTarjeta">{{plan.tituloDePlan}}</mat-card-subtitle>
-      <mat-card-title id="tituloTarjeta">{{plan.precioPlan}}</mat-card-title>
+      <mat-card-title id="tituloTarjeta">{{plan.precioPlan | currency}}</mat-card-title>
     </mat-card-header>
     <mat-card-content>
       <mat-card id="tarjetaCaracteristicasPrecio">
-        <ul *ngFor="let caracteristica of plan.caracteristicas">
-          <li >
-            {{caracteristica.caracteristica1}}
-          </li>
-          <li >
-            {{caracteristica.caracteristica2}}
-          </li>
-          <li >
-            {{caracteristica.caracteristica3}}
-          </li>
-          <li >
-            {{caracteristica.caracteristica4}}
-          </li>
-          <li >
-            {{caracteristica.caracteristica5}}
-          </li>
-          <li >
-            {{caracteristica.caracteristica6}}
-          </li>
-          <li >
-            {{caracteristica.caracteristica7}}
-          </li>
-          <li >
-            {{caracteristica.caracteristica8}}
-          </li>
-          <li >
-            {{caracteristica.caracteristica1}}
-          </li>
-        </ul>
+        <mat-list role="list">
+            <mat-list-item  *ngFor="let item of planes[0].caracteristicas
+            " role="listitem">{{item}}</mat-list-item>
+        </mat-list>
       </mat-card>
     </mat-card-content>
     <mat-card-actions>

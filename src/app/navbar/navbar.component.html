@@ -4,8 +4,8 @@
         <div class="botonesNav">
             <button mat-button [matMenuTriggerFor]="menu">Mi Sitio &#11167;</button>
                 <mat-menu #menu="matMenu">
-                    <button mat-menu-item>Pagina1</button>
-                    <button mat-menu-item>Pagina 2</button>
+                    <button [routerLink]="['/perfil-empresa']"  mat-menu-item>Pagina1</button>
+                    <button [routerLink]="['/perfil-empresa']"  mat-menu-item>Pagina 2</button>
                 </mat-menu>
                 <div class="vl"></div>
             <button class="botonPlantillas" mat-button>Plantillas</button>
@@ -13,8 +13,8 @@
             <button class="botonAyuda" mat-button>Ayuda</button>
         </div>
     </div>
-    <div class="usuario">
-        <div class="vl"></div>
+    <div [routerLink]="['/admin-companies']"  class="usuario">
+        <div  class="vl"></div>
         <img src="../../assets/img/fotoPerfil.webp" alt="" id="propic">
         <div class="usuarioNombre">Usuario</div>
         <div class="vl"></div>

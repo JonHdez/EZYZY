@@ -7,7 +7,7 @@
     <title>Administrador</title>
 </head>
 <body>
-
+    <app-navbar></app-navbar>
 
     <div class="container">
         <h1>Administrador</h1>
@@ -18,7 +18,7 @@
                     <img src="../../../assets/img/fotoPerfil.webp" alt="">
                 </div>
                 <mat-tab-group  color="primary" mat-align-tabs="center" class="tabs">
-                    <mat-tab  label="Administracion de Plantillas">
+                    <mat-tab id="admi-tab" label="Administracion de Plantillas">
                         <div class="plantillas">
                             <p class="plantillasTexto">Plantillas Disponibles</p>
                             <button class="btn-aggPlantilla" mat-raised-button color="primary">
@@ -202,6 +202,6 @@
                 </mat-tab-group> 
             </mat-card>
     </div>
-    
+    <app-footer></app-footer>
 </body>
 </html>

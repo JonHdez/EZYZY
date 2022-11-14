@@ -137,8 +137,8 @@
     "Administrador" : [ 
         { 
             "id":1, 
-            "nombre":"David", 
-            "apellido":"Rodriguez", 
+            "nombre":"Keiry", 
+            "apellido":"Ardon", 
             "correo":"David@gmail.com", 
             "pasword":"1123345647", 
             "fotoUrl":"../src/assets/img/fotoPerfil.webp" 
@@ -190,14 +190,30 @@
                                 "100 Productos", 
                                 "No se que mas poner"
                                 ] 
+        },
+        { 
+            "IdPlan":4, 
+            "tituloDePlan":"Plan 4", 
+            "precioPlan":800, 
+            "caracteristicas": [ 
+                                "Dominio Personalizado", 
+                                "Dominio Gratis por un año", 
+                                "Sertificado SSL", 
+                                "Ancho de Banda de 1GB", 
+                                "Espacio de Almacenamineto de 500mb", 
+                                "1 Hora de Video", 
+                                "100 Productos", 
+                                "No se que mas poner"
+                                ] 
         }
+
 
     ], 
     "Plan2": [ 
         { 
-            "IdPlan":"1000", 
+            "IdPlan":1000, 
             "tituloDePlan":"Plan Gratuito", 
-            "precioPlan":"0 $/mes", 
+            "precioPlan":0, 
             "caracteristicas": [ 
                 { 
                     "caracteristica1":"Dominio personalizado", 
@@ -212,9 +228,9 @@
             ] 
         },
         { 
-            "IdPlan":"1002", 
+            "IdPlan":1002, 
             "tituloDePlan":"Plan Basico", 
-            "precioPlan":"5 $/mes", 
+            "precioPlan":5, 
             "caracteristicas": [ 
                 { 
                     "caracteristica1":"Dominio personalizado incluido", 
@@ -229,9 +245,9 @@
             ] 
         },
         { 
-            "IdPlan":"1003", 
+            "IdPlan":1003, 
             "tituloDePlan":"Plan Profesional", 
-            "precioPlan":"8 $/mes", 
+            "precioPlan":8, 
             "caracteristicas": [ 
                 { 
                     "caracteristica1":"Dominio personalizado incluido", 
@@ -246,9 +262,9 @@
             ] 
         },
         { 
-            "IdPlan":"1004", 
+            "IdPlan":1004, 
             "tituloDePlan":"Plan Profesional Plus", 
-            "precioPlan":"10 $/mes", 
+            "precioPlan":10, 
             "caracteristicas": [ 
                 { 
                     "caracteristica1":"Dominio personalizado incluido", 
@@ -267,7 +283,7 @@
     "Plantillas": [ 
         { 
             "idPlantilla":1, 
-            "tituloDePlantilla":"Platilla 1", 
+            "tituloDePlantilla":"Plantilla 1", 
             "descripcionPlantilla":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At augue eget arcu dictum varius duis at. Ipsum suspendisse ultrices gravida dictum. Donec adipiscing tristique risus nec feugiat in fermentum. ", 
             "correoEmpresa":"Amazon@gmail.com", 
             "codigohtml":"/", 
@@ -275,7 +291,7 @@
         },
         { 
             "idPlantilla":2, 
-            "tituloDePlantilla":"Platilla 2", 
+            "tituloDePlantilla":"Plantilla 2", 
             "descripcionPlantilla":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At augue eget arcu dictum varius duis at. Ipsum suspendisse ultrices gravida dictum. Donec adipiscing tristique risus nec feugiat in fermentum. ", 
             "correoEmpresa":"Amazon@gmail.com", 
             "codigohtml":"/", 
@@ -283,7 +299,7 @@
         },
         { 
             "idPlantilla":3, 
-            "tituloDePlantilla":"Platilla 3", 
+            "tituloDePlantilla":"Plantilla 3", 
             "descripcionPlantilla":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At augue eget arcu dictum varius duis at. Ipsum suspendisse ultrices gravida dictum. Donec adipiscing tristique risus nec feugiat in fermentum. ", 
             "correoEmpresa":"Amazon@gmail.com", 
             "codigohtml":"/", 
@@ -291,7 +307,7 @@
         },
         { 
             "idPlantilla":4, 
-            "tituloDePlantilla":"Platilla 4", 
+            "tituloDePlantilla":"Plantilla 4", 
             "descripcionPlantilla":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At augue eget arcu dictum varius duis at. Ipsum suspendisse ultrices gravida dictum. Donec adipiscing tristique risus nec feugiat in fermentum. ", 
             "correoEmpresa":"Amazon@gmail.com", 
             "codigohtml":"/", 
@@ -299,7 +315,7 @@
         },
         { 
             "idPlantilla":5, 
-            "tituloDePlantilla":"Platilla 5", 
+            "tituloDePlantilla":"Plantilla 5", 
             "descripcionPlantilla":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At augue eget arcu dictum varius duis at. Ipsum suspendisse ultrices gravida dictum. Donec adipiscing tristique risus nec feugiat in fermentum. ", 
             "correoEmpresa":"Amazon@gmail.com", 
             "codigohtml":"/", 
