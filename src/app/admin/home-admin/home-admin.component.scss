@@ -23,8 +23,6 @@ body {
 
 }
 
-
-
 div.btns-accion {
     display: flex;
     justify-content: center;
@@ -80,8 +78,6 @@ div.plan-status {
         margin-bottom: 25px;
     }
 
-
-
     h3 {
         font-size: x-large;
     }
@@ -110,7 +106,6 @@ div.logo-nombre-empresa {
         font-size: 60px;
 
     }
-
 }
 
 .container {
@@ -147,8 +142,6 @@ div.btns-modificar {
 .mat-tab-label{
     color: #FFFFFF !important;
 }
-
-
 
 .plan-muestra {
     display: flex;
@@ -202,9 +195,7 @@ hr {border: 2px solid $azulProfundo; height: 2px; background-color: $azulSecunda
     border-radius: 25px;
     text-align: start;
     color: #FFFFFF;
-
 }
-
 
 .tabla-planes {
     background-color: $azulCuaternario;
@@ -233,7 +224,6 @@ hr {border: 2px solid $azulProfundo; height: 2px; background-color: $azulSecunda
 
 .btn-aggPlantilla {
     margin: auto;
-
 }
 
 button {
@@ -269,9 +259,6 @@ h1 {
     flex-wrap: wrap;
     gap: 15px;
     padding: 20px;
-
-
-
 }
 
 mat-card-content {
@@ -287,11 +274,11 @@ mat-card-actions{
 }
 
 .card{
-width: 320px;
-margin-bottom: 25px;
-height: auto;
-padding: 0;
-margin-top: 25px;
+    width: 320px;
+    margin-bottom: 25px;
+    height: auto;
+    padding: 0;
+    margin-top: 25px;
 }
 
 .tabs {
@@ -299,7 +286,6 @@ margin-top: 25px;
     margin-right: 35px;
     margin-left: 35px;
     color: #FFFFFF;
-
 }
 
 .img-card {
