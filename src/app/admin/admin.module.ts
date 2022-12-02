@@ -9,35 +9,39 @@ import { MatIconModule } from '@angular/material/icon';
 import {MatTableModule} from '@angular/material/table';
 import {MatListModule} from '@angular/material/list';
 import {MatFormFieldModule} from '@angular/material/form-field';
-
+import { CodeBoxComponent } from './code-box/code-box.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [
-    LoginComponent,
-    HomeAdminComponent,
+    declarations: [
+        LoginComponent,
+        HomeAdminComponent,
+        CodeBoxComponent
+    ],
+    exports: [
+        CommonModule,
+        MatButtonModule,
+        MatTabsModule,
+        MatGridListModule,
+        MatIconModule,
+        MatTableModule,
+        MatListModule,
+        MatFormFieldModule,
+        FormsModule,
 
-  ],
 
-  imports: [
-    CommonModule,
-    MatButtonModule,
-    MatTabsModule,
-    MatGridListModule,
-    MatIconModule,
-    MatTableModule,
-    MatListModule,
-    MatFormFieldModule,
-  ],
+    ],
+    imports: [
+        CommonModule,
+        MatButtonModule,
+        MatTabsModule,
+        MatGridListModule,
+        MatIconModule,
+        MatTableModule,
+        MatListModule,
+        MatFormFieldModule,
+        FormsModule,
 
-  exports: [
-    CommonModule,
-    MatButtonModule,
-    MatTabsModule,
-    MatGridListModule,
-    MatIconModule,
-    MatTableModule,
-    MatListModule,
-    MatFormFieldModule,
-  ]
+    ]
 })
 export class AdminModule { }

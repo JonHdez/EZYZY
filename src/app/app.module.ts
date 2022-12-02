@@ -36,6 +36,7 @@ import { TarjetasPlanComponent } from './tarjetas-plan/tarjetas-plan.component';
 import { PlanesComponent } from './planes/planes.component';
 import { TarjetasComponent } from './tarjetas/tarjetas.component';
 import { Seccion3Component } from './home/seccion3/seccion3.component';
+import { CodeBoxComponent } from './admin/code-box/code-box.component';
 
 @NgModule({
   declarations: [
@@ -52,7 +53,9 @@ import { Seccion3Component } from './home/seccion3/seccion3.component';
     CarruselComponent,
     Seccion2Component,
     Seccion3Component,
-    TarjetasComponent
+    TarjetasComponent,
+    CodeBoxComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -75,7 +78,9 @@ import { Seccion3Component } from './home/seccion3/seccion3.component';
     MatMenuModule,
     ReactiveFormsModule,
     HttpClientModule,
-    MatDividerModule
+    MatDividerModule,
+    FormsModule,
+
   ],
   exports:[FooterComponent,
     NavbarComponent

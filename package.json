@@ -9,7 +9,6 @@
     "test": "ng test",
     "serverApi": "json-server --watch server/db.json --port 3000",
     "deploy": "ng build --prod --base-href=https://jonhdez.github.io/EZYZY/ && angular-cli-ghpages --branch gh-pages"
-    
   },
   "private": true,
   "dependencies": {
@@ -26,7 +25,9 @@
     "@fortawesome/angular-fontawesome": "^0.11.1",
     "@fortawesome/fontawesome-svg-core": "^6.2.0",
     "@fortawesome/free-solid-svg-icons": "^6.2.0",
+    "monaco-editor": "^0.33.0",
     "ng2-charts": "^4.0.1",
+    "ngx-monaco-editor-v2": "^14.0.4",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
