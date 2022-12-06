@@ -82,7 +82,13 @@ export class RegistroClienteComponent implements OnInit {
       })
       console.log('password error',this.password.hasError('pattern'))
       console.log('as',this.clienteRegistro)
+
+      this.registrocliente.newCliente(this.clienteRegistro).subscribe(res=>{
+        console.log('Respuesta:', res)      
+      })
     }
+
+
 
   }
 }
