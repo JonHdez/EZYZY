@@ -1,5 +1,12 @@
 @import '../../../styles.scss';
 
+.formularioLogin{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 400px;
+}
+
 .cardIniciarSesion{
     display:flex;
     flex-direction: column;
