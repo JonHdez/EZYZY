@@ -42,6 +42,7 @@ export class HomeAdminComponent implements OnInit {
   columnasTablaPlan: string[] = ['Tipo de Plan', 'Precio', 'Accion'] 
   columnasTablaCuentas: string[] = ['Nombre de la Empresa', 'Nombre del Dueño', 'Status','Accion'] 
   columnasTablaClientes: string[] = ['Nombre del Cliente','Status','Accion'] 
+
   
   constructor(
               private administradorSvc: AdministradorsService,
@@ -51,7 +52,15 @@ export class HomeAdminComponent implements OnInit {
               private empresaSvs: EmpresasService
              ) { }
 
+  newCliente(newcliente: Cliente) {
+    this.clienteSvs.newCliente(newcliente).subscribe((cliente)=> {
+      this.clientes.push(cliente)
+      console.log(cliente)
+    })
+  }
+  
   ngOnInit(): void {
+
     this.administradorSvc.getAdministradors().pipe(
       tap((administradores:Administrador[]) => {
         this.administradores = administradores;
