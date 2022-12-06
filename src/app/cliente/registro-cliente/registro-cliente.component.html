@@ -20,6 +20,7 @@
                 <button id="botonFB" mat-button >Continuar con Facebook</button>
                 <button id="botonGoogle" mat-button >Continuar con Google</button>
             </div>
+            <form [formGroup]="registroForm" (ngSubmit)="registro()">
             <div class="formulario">
                 <div class="columna1">
                     <mat-form-field>
@@ -69,10 +70,11 @@
                 <div class="columna1">
                     <mat-form-field>
                         <mat-label>Ingresa tu Contraseña</mat-label>
-                        <input type="password" matInput [formControl]="password" [errorStateMatcher]="matcher">
+                        <input type="password" matInput [formControl]="password" [errorStateMatcher]="matcher" [type]="hide ? 'password' : 'text'">
+                        <mat-icon matSuffix (click)="hide = !hide">{{hide ? '⬤' : 'ⵔ'}}</mat-icon>
                         <mat-hint>Ingrese Contraseña valuida</mat-hint>
                         <mat-error *ngIf="!password.hasError('required')">
-                          Por favor ingrese contraseña valida
+                          Por favor ingrese contraseña valida (caracter especial,numero y mayuscula)
                         </mat-error>
                         <mat-error *ngIf="password.hasError('required')">
                           La contraseña es <strong>requerida</strong>
@@ -83,7 +85,7 @@
                     <mat-form-field>
                         <mat-label>Ingresa tu Contraseña nuevamente</mat-label>
                         <input type="password" matInput [formControl]="password" [errorStateMatcher]="matcher">
-                        <mat-hint>Ingrese Contraseña valuida</mat-hint>
+                        <mat-hint>Ingrese Contraseña valida</mat-hint>
                         <mat-error *ngIf="!password.hasError('required')">
                           Por favor ingrese contraseña valida
                         </mat-error>
@@ -94,8 +96,9 @@
                 </div>
             </div>
             <div class="containerBotonRegistrate">
-                <button [routerLink]="['/loginCliente']"  mat-button id="botonRegistrateCliente">Regístrate</button>
+                <button  mat-button id="botonRegistrateCliente" type="submit">Regístrate</button>
             </div>
+          </form>
             </mat-card>
         </div>
     </div>
