@@ -7,7 +7,7 @@ import { Administrador } from '../interfaces/administrador.interface';
   providedIn: 'root'
 })
 export class AdministradorsService {
-  private apiUrl = 'http://localhost:3000/Administrador'
+  private apiUrl = 'https://backend-ezyzy-production.up.railway.app/admin'
   constructor(private http: HttpClient) { }
 
   getAdministradors():Observable<Administrador[]>{

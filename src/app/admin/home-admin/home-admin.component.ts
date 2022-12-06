@@ -41,6 +41,7 @@ export class HomeAdminComponent implements OnInit {
   //Columnas de Tablas
   columnasTablaPlan: string[] = ['Tipo de Plan', 'Precio', 'Accion'] 
   columnasTablaCuentas: string[] = ['Nombre de la Empresa', 'Nombre del Dueño', 'Status','Accion'] 
+  columnasTablaClientes: string[] = ['Nombre del Cliente','Status','Accion'] 
   
   constructor(
               private administradorSvc: AdministradorsService,

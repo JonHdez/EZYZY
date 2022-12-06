@@ -6,7 +6,8 @@
             "Apellido":"Hernandez", 
             "correo":"jonathan@gmail.com", 
             "pasword":"123456", 
-            "fotoUrl":"../src/assets/img/fotoPerfil.webp" 
+            "fotoUrl":"../src/assets/img/fotoPerfil.webp",
+            "status": "Activa"
         },
         {
             "id":2, 
@@ -14,7 +15,8 @@
             "Apellido":"Maldonado", 
             "correo":"Fares@gmail.com", 
             "pasword":"123456", 
-            "fotoUrl":"../src/assets/img/fotoPerfil.webp" 
+            "fotoUrl":"../src/assets/img/fotoPerfil.webp",
+            "status": "Activa"
         },
         {
             "id":3, 
@@ -22,7 +24,8 @@
             "Apellido":"Ardon", 
             "correo":"Gianella@gmail.com", 
             "pasword":"123456", 
-            "fotoUrl":"../src/assets/img/fotoPerfil.webp" 
+            "fotoUrl":"../src/assets/img/fotoPerfil.webp",
+            "status": "Activa"
         }
     ], 
     "Empresa" : [ 

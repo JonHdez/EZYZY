@@ -13,7 +13,7 @@
         <h1>Administrador</h1>
             <mat-card class="card-administrador">
                 <div class="adminPerfil">
-                    <p class="bienvenido">Bienvenido</p>
+                    <p class="bienvenido">Bienvenido/a</p>
                     <p class="nombreAdmin">{{administradores[0].nombre}} {{administradores[0].apellido}}</p>
                     <img src="../../../assets/img/fotoPerfil.webp" alt="">
                 </div>
@@ -134,7 +134,7 @@
                     
                     <mat-tab label="Gestion de Cuentas">
                         <div class="plantillas">
-                            <p class="plantillasTexto">Cuentas</p>
+                            <p class="plantillasTexto">Cuentas de Empresas</p>
                         </div>
                         <div class="tabla">
                             <table mat-table id="tabla-planes" [dataSource]="empresas" class="mat-elevation-z8 tabla-planes">
@@ -169,6 +169,39 @@
                                 </ng-container>
                                 <tr mat-header-row *matHeaderRowDef="columnasTablaCuentas"></tr>
                                 <tr mat-row *matRowDef="let row; columns: columnasTablaCuentas;"></tr>
+                              </table> 
+                        </div>
+                        <div class="plantillas">
+                            <p class="plantillasTexto">Cuentas de Usuarios normales</p>
+                        </div>
+                        <div class="tabla">
+                            <table mat-table id="tabla-planes" [dataSource]="clientes" class="mat-elevation-z8 tabla-planes">
+                              
+                                <ng-container  matColumnDef="Nombre del Cliente">
+                                  <th class="th" mat-header-cell *matHeaderCellDef> Nombre del Cliente </th>
+                                  <td class="td" mat-cell *matCellDef="let cliente">{{cliente.nombre}} </td>
+                                </ng-container>
+
+                                <ng-container matColumnDef="Status">
+                                  <th class="th" mat-header-cell *matHeaderCellDef> Status </th>
+                                  <td class="td" mat-cell *matCellDef="let cliente"> {{cliente.status}} </td>
+                                </ng-container>
+                              
+                                <ng-container  matColumnDef="Accion">
+                                  <th class="th" mat-header-cell *matHeaderCellDef> Accion </th>
+                                  <td class="td" mat-cell *matCellDef="let cliente">
+                                    <div class="btns-accion">
+                                        <button mat-raised-button color="primary">
+                                            <fa-icon [icon]="faCheck"></fa-icon> 
+                                        </button>
+                                        <button mat-raised-button color="primary">
+                                            <fa-icon [icon]="faXmark"></fa-icon> 
+                                        </button>
+                                    </div>
+                                  </td>
+                                </ng-container>
+                                <tr mat-header-row *matHeaderRowDef="columnasTablaClientes"></tr>
+                                <tr mat-row *matRowDef="let row; columns: columnasTablaClientes;"></tr>
                               </table> 
                         </div>
                         <hr>

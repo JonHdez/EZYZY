@@ -7,10 +7,10 @@ import { Cliente } from '../interfaces/cliente.interface';
   providedIn: 'root'
 })
 export class ClientesService {
-  private apiUrl = 'http://localhost:3000/Cliente'
+  private apiUrl = 'https://backend-ezyzy-production.up.railway.app/cliente'
   constructor(private http: HttpClient) { }
 
-  getClientes():Observable<any>{
+  getClientes():Observable<Cliente[]>{
     return this.http.get<Cliente[]>(this.apiUrl);
   }
 }
