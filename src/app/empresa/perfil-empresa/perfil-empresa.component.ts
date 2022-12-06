@@ -8,8 +8,7 @@ import { ChartConfiguration, ChartOptions, ChartType } from "chart.js";
 
 //Iconos
 
-import { ProductosService } from 'src/app/services/producto.service';
-import { Producto } from 'src/app/interfaces/producto.interface';
+
 import { baseColors } from 'ng2-charts';
 
 
@@ -25,7 +24,6 @@ export class PerfilEmpresaComponent implements OnInit {
 
   //Arreglos
   empresas!:Empresa[]
-  productos!:Producto[]
 
 
   //Columnas de Tablas
@@ -102,7 +100,6 @@ export class PerfilEmpresaComponent implements OnInit {
 
   constructor(
     private empresaSvs: EmpresasService,
-    private productoSvs: ProductosService
     )
     {}
 
@@ -114,11 +111,6 @@ export class PerfilEmpresaComponent implements OnInit {
         console.log(this.empresas);
       })).subscribe();
   
-    this.productoSvs.getProductos().pipe(
-      tap((productos:Producto[]) => {
-        this.productos = productos;
-        console.log(this.productos);
-      })).subscribe();
   }
 }
   

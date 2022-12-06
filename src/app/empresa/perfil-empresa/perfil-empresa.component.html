@@ -41,33 +41,33 @@
             </div>
         </div>
         <hr>
-        <div>
+<!--         <div>
             <mat-tab-group  color="primary" mat-align-tabs="center" class="tabs">
                 <mat-tab label="Productos">
                     <div class="tabla">
-                        <table  mat-table [dataSource]="productos" class="mat-elevation-z8 tabla-productos">
+                        <table  mat-table [dataSource]="empresas" class="mat-elevation-z8 tabla-productos">
                           
                             <ng-container  matColumnDef="Nombre de Producto">
                               <th class="th" mat-header-cell *matHeaderCellDef> Nombre de Producto </th>
-                              <td class="td" mat-cell *matCellDef="let producto">{{producto.nombreProducto
+                              <td class="td" mat-cell *matCellDef="let empresa">{{empresa.productos
                             }} </td>
                             </ng-container>
                           
                             <ng-container matColumnDef="Cantidad">
                               <th class="th" mat-header-cell *matHeaderCellDef> Cantidad </th>
-                              <td class="td" mat-cell *matCellDef="let producto"> {{producto.cantidad
+                              <td class="td" mat-cell *matCellDef="let empresa"> {{empresa.cantidad
                             }} </td>
                             </ng-container>
                           
                             <ng-container matColumnDef="Precio">
                               <th class="th" mat-header-cell *matHeaderCellDef> Precio </th>
-                              <td class="td" mat-cell *matCellDef="let producto"> {{producto.precio | currency
+                              <td class="td" mat-cell *matCellDef="let empresa"> {{empresa.precio | currency
                             }} </td>
                             </ng-container>
                           
                             <ng-container  matColumnDef="Accion">
                               <th class="th" mat-header-cell *matHeaderCellDef> Accion </th>
-                              <td class="td" mat-cell *matCellDef="let producto">
+                              <td class="td" mat-cell *matCellDef="let empresa">
                                 <div class="btns-accion">
                                     <button mat-raised-button color="primary">
                                         <fa-icon [icon]="faPenToSquare"></fa-icon> 
@@ -108,7 +108,7 @@
                     </div>
                 </mat-tab>
             </mat-tab-group>
-        </div>
+        </div> -->
     </div>
 </body>
 <app-footer></app-footer>

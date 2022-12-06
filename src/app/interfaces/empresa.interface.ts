@@ -1,9 +1,18 @@
 export interface Empresa {
-    id: number; 
     nombre:string; 
     Apellido:string; 
     correo:string; 
-    pasword:string; 
+    pasword:string;
+    productos: [
+        {
+            id: number;
+            nombreProducto: string
+            cantidad:number
+            precio:number
+            descripcion:string
+        }
+    ]
+
     empresa: [ 
         { 
             NombreEmpresa:string;

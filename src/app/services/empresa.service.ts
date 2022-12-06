@@ -7,7 +7,7 @@ import { Empresa } from '../interfaces/empresa.interface';
   providedIn: 'root'
 })
 export class EmpresasService {
-  private apiUrl = 'http://localhost:3000/Empresa'
+  private apiUrl = 'https://backend-ezyzy-production.up.railway.app/empresa'
   constructor(private http: HttpClient) { }
 
   getEmpresas():Observable<Empresa[]>{

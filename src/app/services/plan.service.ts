@@ -7,7 +7,7 @@ import { Plan } from '../interfaces/plan.interface';
   providedIn: 'root'
 })
 export class PlansService {
-  private apiUrl = 'http://localhost:3000/Plan'
+  private apiUrl = 'https://backend-ezyzy-production.up.railway.app/plan'
   constructor(private http: HttpClient) { }
 
   getPlanes():Observable<Plan[]>{
