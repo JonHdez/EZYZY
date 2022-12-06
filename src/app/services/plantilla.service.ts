@@ -7,7 +7,7 @@ import { Plantilla } from '../interfaces/plantilla.interface';
   providedIn: 'root'
 })
 export class PlantillasService {
-  private apiUrl = 'https://backend-ezyzy-production.up.railway.app/plantillas'
+  private apiUrl = 'https://backend-ezyzy-production.up.railway.app/plantilla'
   constructor(private http: HttpClient) { }
 
   getPlantillas():Observable<Plantilla[]>{
