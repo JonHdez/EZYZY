@@ -2,6 +2,8 @@ import { AdministradorsService } from './../../services/administrador.service';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
+import { TokenService } from 'src/app/services/token.service';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -12,7 +14,11 @@ export class LoginComponent implements OnInit {
 
   public loginAdminForm!: FormGroup;
 
-  constructor(private adminSvc: AdministradorsService,private formBuilder: FormBuilder, private router:Router) { }
+  constructor(private adminSvc: AdministradorsService,
+              private formBuilder: FormBuilder, 
+              private router:Router,
+              private authService: AuthService,
+              private tokenService: TokenService) { }
 
   ngOnInit(): void {
     this.loginAdminForm= this.formBuilder.group({
@@ -22,7 +28,7 @@ export class LoginComponent implements OnInit {
   }
 
   loginAdmin(){
-    this.adminSvc.getAdministradors()
+    this.adminSvc.getAdmin()
     .subscribe(res=>{
         const usuarioAdmin = res.find((a:any)=>{
           console.log('vairbale y contrasenia', a.correo, a.pasword)
