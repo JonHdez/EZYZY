@@ -1,3 +1,4 @@
+import { LoginComponent } from './admin/login/login.component';
 import { HomeComponent } from './home/home/home.component';
 import { PlanesComponent } from './planes/planes.component';
 import { Plan } from './interfaces/plan.interface';
@@ -18,7 +19,10 @@ const routes: Routes = [
     path: 'loginCliente', component:LoginClienteComponent
   },
   {
-    path: 'admin-companies', component: HomeAdminComponent
+    path: 'admin-perfil', component: HomeAdminComponent
+  },
+  {
+    path: 'admin', component: LoginComponent
   },
   {
     path: 'perfil-empresa', component: PerfilEmpresaComponent

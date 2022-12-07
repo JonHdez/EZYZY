@@ -1,3 +1,4 @@
+import { LoginComponent } from './admin/login/login.component';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatDividerModule } from '@angular/material/divider';
 import { Seccion2Component } from './home/seccion2/seccion2.component';
@@ -55,6 +56,7 @@ import { CodeBoxComponent } from './admin/code-box/code-box.component';
     Seccion3Component,
     TarjetasComponent,
     CodeBoxComponent,
+    LoginComponent
 
   ],
   imports: [

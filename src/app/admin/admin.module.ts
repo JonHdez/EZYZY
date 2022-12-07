@@ -1,3 +1,4 @@
+import { MatCardModule } from '@angular/material/card';
 import { MatTabsModule } from '@angular/material/tabs';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -10,37 +11,39 @@ import {MatTableModule} from '@angular/material/table';
 import {MatListModule} from '@angular/material/list';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { CodeBoxComponent } from './code-box/code-box.component';
-import { FormsModule } from '@angular/forms';
+import { FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatInputModule } from '@angular/material/input';
+import { MatDividerModule } from '@angular/material/divider';
 
 @NgModule({
     declarations: [
         LoginComponent,
         HomeAdminComponent,
-        CodeBoxComponent
+        CodeBoxComponent,
     ],
     exports: [
-        CommonModule,
-        MatButtonModule,
-        MatTabsModule,
-        MatGridListModule,
-        MatIconModule,
-        MatTableModule,
-        MatListModule,
+        MatInputModule,
         MatFormFieldModule,
+        MatInputModule,
+        MatCardModule,
+        MatButtonModule,
         FormsModule,
+        ReactiveFormsModule,
+        FormControl,
+        MatDividerModule,
 
 
     ],
     imports: [
         CommonModule,
-        MatButtonModule,
-        MatTabsModule,
-        MatGridListModule,
-        MatIconModule,
-        MatTableModule,
-        MatListModule,
         MatFormFieldModule,
+        MatInputModule,
+        MatCardModule,
+        MatButtonModule,
         FormsModule,
+        ReactiveFormsModule,
+        FormControl,
+        MatDividerModule,
 
     ]
 })

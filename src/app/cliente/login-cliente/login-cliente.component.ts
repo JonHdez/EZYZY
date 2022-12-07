@@ -1,3 +1,4 @@
+
 import { ClientesService } from './../../services/clientes.service';
 import { Component, OnInit } from '@angular/core';
 import {Cliente} from 'src/app/interfaces/cliente.interface';
@@ -66,6 +67,7 @@ export class LoginClienteComponent implements OnInit {
           alert("Logeado exitosamente");
           this.loginForm.reset();
           this.router.navigate(['home']);
+
         }else{
           
           alert('Usuario no encontrado')
