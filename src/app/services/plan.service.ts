@@ -13,4 +13,12 @@ export class PlansService {
   getPlanes():Observable<Plan[]>{
     return this.http.get<Plan[]>(this.apiUrl)
   }
+
+  newPlan(plan: Plan):Observable<Plan>{
+    return this.http.post<Plan>(this.apiUrl,plan);
+  }
+
+  updatePlan(plan: Plan):Observable<Plan>{
+    return this.http.put<Plan>(this.apiUrl, plan)
+  }
 }

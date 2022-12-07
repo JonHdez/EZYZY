@@ -58,10 +58,24 @@ export class HomeAdminComponent implements OnInit {
       console.log(cliente)
     })
   }
+
+  newPlantilla(newPlantilla: Plantilla) {
+    this. plantillaSvc.newPlantilla(newPlantilla).subscribe((Plantilla)=> {
+      this.plantillas.push(Plantilla)
+      console.log(Plantilla)
+    })
+  }
+
+  newPlan(newPlan: Plan) {
+    this. planesSvc.newPlan(newPlan).subscribe((Plan)=> {
+      this.planes.push(Plan)
+      console.log(Plan)
+    })
+  }
   
   ngOnInit(): void {
 
-    this.administradorSvc.getAdministradors().pipe(
+    this.administradorSvc.getAdmin().pipe(
       tap((administradores:Administrador[]) => {
         this.administradores = administradores;
         console.log(this.administradores);

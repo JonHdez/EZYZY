@@ -13,4 +13,7 @@ export class EmpresasService {
   getEmpresas():Observable<Empresa[]>{
     return this.http.get<Empresa[]>(this.apiUrl)
   }
+  newEmpresa(empresa: Empresa):Observable<Empresa>{
+    return this.http.post<Empresa>(this.apiUrl,empresa);
+  }
 }

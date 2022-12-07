@@ -13,4 +13,8 @@ export class PlantillasService {
   getPlantillas():Observable<Plantilla[]>{
     return this.http.get<Plantilla[]>(this.apiUrl)
   }
+  
+  newPlantilla(plantilla: Plantilla):Observable<Plantilla>{
+    return this.http.post<Plantilla>(this.apiUrl,plantilla);
+  }
 }

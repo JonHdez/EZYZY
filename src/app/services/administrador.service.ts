@@ -10,7 +10,11 @@ export class AdministradorsService {
   private apiUrl = 'https://backend-ezyzy-production.up.railway.app/admin'
   constructor(private http: HttpClient) { }
 
-  getAdministradors():Observable<Administrador[]>{
+  getAdmin():Observable<Administrador[]>{
     return this.http.get<Administrador[]>(this.apiUrl)
+  }
+
+  newAdmin(admin: Administrador):Observable<Administrador>{
+    return this.http.post<Administrador>(this.apiUrl,admin);
   }
 }

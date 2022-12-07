@@ -6,6 +6,8 @@ import {tap} from 'rxjs/operators';
 import {FormBuilder, FormControl, FormGroup, FormGroupDirective, NgForm, Validators} from '@angular/forms';
 import {ErrorStateMatcher} from '@angular/material/core';
 import { Router } from '@angular/router';
+import { AuthService } from '../../services/auth.service'
+import { TokenService } from '../../services/token.service'
 
 /** Error when invalid control is dirty, touched, or submitted. */
 export class MyErrorStateMatcher implements ErrorStateMatcher {
@@ -25,7 +27,11 @@ export class LoginClienteComponent implements OnInit {
   public loginForm!: FormGroup;
   minPw = 8;
   clientes!: Cliente[];
-  constructor(private clienteSvc:ClientesService, private formBuilder: FormBuilder, private router:Router) { }
+  constructor(private clienteSvc: ClientesService, 
+              private formBuilder: FormBuilder, 
+              private router: Router,
+              private authService: AuthService,
+              private tokenService: TokenService) { }
 
   cliente:any=[];
   indexArrayCliente:any=[];
