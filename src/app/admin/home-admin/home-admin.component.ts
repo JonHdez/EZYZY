@@ -73,7 +73,7 @@ export class HomeAdminComponent implements OnInit {
     console.log(id)
     this.getPlantilla(id)
     this.form1= id;
-    this.router.navigate(["/admin-companies/code-box/"+this.form1], )
+    this.router.navigate(["/admin/code-box/"+this.form1], )
   }
 
   newCliente(newcliente: Cliente) {

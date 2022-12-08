@@ -12,9 +12,8 @@ export class PlantillaComponent implements OnInit {
   plantillas!: Plantilla[];
   constructor(private plantillaSvc: PlantillasService,) { }
 
-  verPlantilla(id: any) {
+  verPlantilla(id:any) {
     console.log(id)
-
   }
   ngOnInit(): void {
     this.plantillaSvc
