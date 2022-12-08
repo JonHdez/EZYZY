@@ -25,7 +25,8 @@ export class MyErrorStateMatcher implements ErrorStateMatcher {
 export class LoginClienteComponent implements OnInit {
 
   public loginForm!: FormGroup;
-  minPw = 8;
+  clienteAuth!:Cliente;
+  minPw = 5;
   clientes!: Cliente[];
   constructor(private clienteSvc: ClientesService, 
               private formBuilder: FormBuilder, 
@@ -37,7 +38,7 @@ export class LoginClienteComponent implements OnInit {
   indexArrayCliente:any=[];
   hide = true;
   password= new FormControl('', [Validators.required, Validators.minLength(this.minPw)]);
-  emailFormControl = new FormControl('', [Validators.required, Validators.email]);
+  correo = new FormControl('', [Validators.required, Validators.email]);
 
   matcher = new MyErrorStateMatcher();
 
@@ -62,26 +63,25 @@ export class LoginClienteComponent implements OnInit {
   }
 
   login(){
-    this.clienteSvc.getClientes()
-    .subscribe(res=>{
-        const usuario = res.find((a:any)=>{
-          console.log('vairbale y contrasenia', a.correo, a.pasword)
-          console.log('vairbale y contrasenia log', this.loginForm.value.correo, this.loginForm.value.contraseña)
-          return a.correo === this.loginForm.value.correo && a.pasword === this.loginForm.value.contraseña
-        });
-        if(usuario){
-          alert("Logeado exitosamente");
-          this.loginForm.reset();
-          this.router.navigate(['home']);
 
-        }else{
-          
-          alert('Usuario no encontrado')
-        }
-        },
-        error=>{
-          console.log(error);
-      });
+    this.clienteAuth =({
+      nombre:'',
+      Apellido: '',
+      correo: this.correo.value!,
+      pasword: this.password.value!,
+      fotoUrl: '',
+      status: ''
+    });
+
+    this.authService.loginCliente(this.clienteAuth).subscribe({
+      next:(res)=>{
+        this.tokenService.setToken(res.token);
+        console.log(res);
+      }
+    });
+
+    alert("Logeado exitosamente");
+        this.router.navigate(['home']);
     }
   }
 

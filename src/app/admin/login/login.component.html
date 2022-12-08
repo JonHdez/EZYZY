@@ -6,11 +6,11 @@
             <div class="formulario">
                 <mat-form-field class="example-full-width">
                     <mat-label>Ingresa tu usuario administrador</mat-label>
-                    <input formControlName="correoAdmin" type="email" matInput>
+                    <input [formControl]="correo" type="email" matInput>
                   </mat-form-field>
                   <mat-form-field>
                     <mat-label>Ingresa tu Contraseña</mat-label>
-                    <input formControlName="contraseñaAdmin" type="password" matInput>
+                    <input [formControl]="password" type="password" matInput>
                 </mat-form-field>
             </div>
             <div class="containerBotonIniciarSesionAdmin">
