@@ -4,6 +4,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Cliente } from '../interfaces/cliente.interface';
 import { Administrador } from '../interfaces/administrador.interface';
+import { Token } from '../interfaces/token.interface';
 
 @Injectable({
   providedIn: 'root'
@@ -40,5 +41,8 @@ export class AuthService {
     return this.http.post<any>(this.apiUrl+ 'me', {})
   }
 
+  decodeToken(token:Token):Observable<any> {
+    return this.http.post<any>(this.apiUrl + 'yo', token);
+  } 
  
 }

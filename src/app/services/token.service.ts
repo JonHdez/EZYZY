@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 
 
 @Injectable({
@@ -7,7 +8,6 @@ import { Injectable } from '@angular/core';
 })
 export class TokenService {
   constructor(private http: HttpClient) { }
-
   setToken(token: string): void {
     localStorage.setItem('token',token)
   }
@@ -19,4 +19,6 @@ export class TokenService {
   RemoveToken(): void{
     localStorage.removeItem('token')!;
   }
+
+
 }
