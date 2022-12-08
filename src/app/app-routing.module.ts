@@ -41,6 +41,9 @@ const routes: Routes = [
     path: 'admin/code-box', component: CodeBoxComponent
   },
   {
+    path: 'admin/code-box/:form1', component: CodeBoxComponent
+  },
+  {
     path: 'plantillas', component: PlantillaComponent
   },
 ];
