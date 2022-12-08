@@ -1,31 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-<body>
-<app-navbar></app-navbar>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <app-navbar></app-navbar>
     <div class="app" id="app">
-        <section>
-            <div>
-                <textarea (change)="update()" (keyup)="update()"  [(ngModel)]="$html" id="html"></textarea>
-            </div>
-            <div>
-                <textarea (change)="update()" (keyup)="update()"  [(ngModel)]="$js" id="js" ></textarea>
-            </div>
-    
-            <div>
-                <textarea (change)="update()" (keyup)="update()"  [(ngModel)]="$css" id="css" ></textarea>
-            </div>
-    
-            <iframe srcdoc="<h1>Hola Mundo</h1>"></iframe>
-        </section>
-        <div class="btn-guardar">
-            <button (click)="guardarHtml()" mat-raised-button color="primary" class="btn-guardar-html">Guardar</button>
+      <section>
+        <div>
+          <textarea
+            (change)="update()"
+            (keyup)="update()"
+            [(ngModel)]="$html"
+            id="html"
+          ></textarea>
         </div>
-    </div> 
- <app-footer></app-footer> 
-</body>
+        <div>
+          <textarea
+            (change)="update()"
+            (keyup)="update()"
+            [(ngModel)]="$js"
+            id="js"
+          ></textarea>
+        </div>
+
+        <div>
+          <textarea
+            (change)="update()"
+            (keyup)="update()"
+            [(ngModel)]="$css"
+            id="css"
+          ></textarea>
+        </div>
+
+        <iframe srcdoc="<h1>Hola Mundo</h1>"></iframe>
+      </section>
+      <div class="btn-guardar">
+        <button
+          (click)="guardarHtml()"
+          mat-raised-button
+          color="primary"
+          class="btn-guardar-html"
+        >
+          Guardar
+        </button>
+      </div>
+    </div>
+    <app-footer></app-footer>
+  </body>
 </html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .navbar {
+        width: 80%;
+        margin: auto;
+        padding: 35px 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .navbar ul li {
+        list-style: none;
+        display: inline-block;
+        margin: 0 20px;
+        position: relative;
+      }
+
+      .navbar ul li a {
+        text-decoration: none;
+        color: #ffffff;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+        font-size: large;
+      }
+
+      .navbar ul li::before {
+        content: "";
+        height: 3px;
+        width: 0%;
+        background-color: #ffffff;
+        position: absolute;
+        left: 0;
+        bottom: -12px;
+        transition: 0.4s ease-out;
+      }
+
+      .navbar ul li:hover::before {
+        width: 100%;
+      }
+
+      body {
+        background-color: #8f2fdf;
+        color: #ffffff;
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+
+      #footer {
+        margin-top: 50px;
+        background-color: #470861;
+      }
+
+      .containerFooter {
+        display: flex;
+        flex-direction: row;
+        width: inherit;
+        justify-content: space-evenly;
+        align-items: center;
+        height: 55px;
+      }
+
+      .info1 {
+        color: #ffffff;
+        font-size: medium;
+        font-weight: 600;
+      }
+
+      #cuerpo {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 80px;
+        margin-top: 50px;
+
+      }
+
+      h3:hover {
+        cursor: pointer;
+      }
+
+      img {
+            height: 280px;
+
+      }
+
+      #img {
+        width: auto;
+        max-height: 100%;
+      }
+
+      #info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        padding: 50px;
+      }
+
+
+    </style>
+  </head>
+  <body>
+    <div class="navbar">
+      <h3>Your Logo</h3>
+      <ul>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Pricing</a></li>
+        <li><a href="#">Our Staff</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+
+    <div id="cuerpo">
+        <div id="img">
+            <img src="https://i0.wp.com/brochure3d.com/wp-content/plugins/elementor/assets/images/placeholder.png?w=750&ssl=1" alt="">
+        </div>
+
+        <div id="info">
+            <h1>Your Info</h1>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto sed nulla eos ab itaque voluptate magni ullam illum rerum, recusandae, quisquam ratione. Amet necessitatibus saepe, error excepturi ea ipsum adipisci. Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga id reiciendis est, in voluptatum ipsum incidunt officia aliquid. Eum fuga beatae animi vero alias a quibusdam sapiente. Cum, ea quibusdam!</p>
+        </div>
+    </div>
+
+    <div id="footer">
+      <div class="containerFooter">
+        <div class="info1">Politicas de Privacidad</div>
+        <div class="info1">Terminos y Condiciones</div>
+        <div class="info1">©2022 all rights reserved</div>
+      </div>
+    </div>
+  </body>
+</html>

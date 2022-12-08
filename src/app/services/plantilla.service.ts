@@ -20,6 +20,13 @@ export class PlantillasService {
     });
     return this.http.get<Plantilla[]>(this.apiUrl, {headers})
   }
+  getPlantilla(id:string):Observable<Plantilla>{
+    const headers = new HttpHeaders({
+      "Content-Type": "application/json",
+      "Authorization": "Bearer " +  this.tokenService.getToken(),
+    });
+    return this.http.get<Plantilla>(this.apiUrl+id , {headers})
+  }
   
   newPlantilla(plantilla: Plantilla):Observable<Plantilla>{
     return this.http.post<Plantilla>(this.apiUrl,plantilla);
