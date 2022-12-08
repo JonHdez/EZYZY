@@ -10,6 +10,7 @@ import {LoginClienteComponent} from './cliente/login-cliente/login-cliente.compo
 import { HomeAdminComponent } from './admin/home-admin/home-admin.component';
 import { PerfilEmpresaComponent } from './empresa/perfil-empresa/perfil-empresa.component';
 import { CodeBoxComponent } from './admin/code-box/code-box.component'
+import { PlantillaComponent } from './plantilla/plantilla.component';
 
 const routes: Routes = [
   {
@@ -37,7 +38,10 @@ const routes: Routes = [
     path: 'home', component: HomeComponent
   },
   {
-    path: 'admin-companies/code-box', component: CodeBoxComponent
+    path: 'admin/code-box', component: CodeBoxComponent
+  },
+  {
+    path: 'plantillas', component: PlantillaComponent
   },
 ];
 

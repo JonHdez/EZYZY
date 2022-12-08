@@ -38,6 +38,7 @@ import { PlanesComponent } from './planes/planes.component';
 import { TarjetasComponent } from './tarjetas/tarjetas.component';
 import { Seccion3Component } from './home/seccion3/seccion3.component';
 import { CodeBoxComponent } from './admin/code-box/code-box.component';
+import { PlantillaComponent } from './plantilla/plantilla.component';
 
 @NgModule({
   declarations: [
@@ -56,7 +57,8 @@ import { CodeBoxComponent } from './admin/code-box/code-box.component';
     Seccion3Component,
     TarjetasComponent,
     CodeBoxComponent,
-    LoginComponent
+    LoginComponent,
+    PlantillaComponent
 
   ],
   imports: [

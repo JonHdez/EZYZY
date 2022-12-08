@@ -5,15 +5,14 @@
             <button mat-button [matMenuTriggerFor]="menu">Mi Sitio &#11167;</button>
                 <mat-menu #menu="matMenu">
                     <button [routerLink]="['/perfil-empresa']"  mat-menu-item>Paginsa1</button>
-                    <button [routerLink]="['/perfil-empresa']"  mat-menu-item>Pagina 2</button>
                 </mat-menu>
                 <div class="vl"></div>
-            <button class="botonPlantillas" mat-button>Plantillas</button>
+            <button [routerLink]="['/plantillas']" class="botonPlantillas" mat-button>Plantillas</button>
             <div class="vl"></div>
             <button class="botonAyuda" mat-button>Ayuda</button>
         </div>
     </div>
-    <div [routerLink]="['/admin-companies']"  class="usuario">
+    <div class="usuario">
         <div  class="vl"></div>
         <img src="../../assets/img/fotoPerfil.webp" alt="" id="propic">
         <button mat-button [matMenuTriggerFor]="menuUsuario">Usuario &#11167;</button>
