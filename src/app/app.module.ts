@@ -39,6 +39,7 @@ import { TarjetasComponent } from './tarjetas/tarjetas.component';
 import { Seccion3Component } from './home/seccion3/seccion3.component';
 import { CodeBoxComponent } from './admin/code-box/code-box.component';
 import { PlantillaComponent } from './plantilla/plantilla.component';
+import { VerPlantillaComponent } from './ver-plantilla/ver-plantilla.component';
 
 @NgModule({
   declarations: [
@@ -58,7 +59,8 @@ import { PlantillaComponent } from './plantilla/plantilla.component';
     TarjetasComponent,
     CodeBoxComponent,
     LoginComponent,
-    PlantillaComponent
+    PlantillaComponent,
+    VerPlantillaComponent
 
   ],
   imports: [

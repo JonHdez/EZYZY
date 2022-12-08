@@ -22,7 +22,7 @@
             <p>{{ plantilla.descripcionPlantilla }}</p>
           </mat-card-content>
           <mat-card-actions align="end">
-            <button (click)="verPlantilla(plantilla._id)" mat-raised-button color="primary">Ver</button>
+            <button [routerLink]="['plantillas/:form1']" routerLinkActive="router-link-active"  (click)="verPlantilla(plantilla._id)" mat-raised-button color="primary">Ver</button>
           </mat-card-actions>
         </mat-card>
       </div>

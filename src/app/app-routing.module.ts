@@ -11,6 +11,7 @@ import { HomeAdminComponent } from './admin/home-admin/home-admin.component';
 import { PerfilEmpresaComponent } from './empresa/perfil-empresa/perfil-empresa.component';
 import { CodeBoxComponent } from './admin/code-box/code-box.component'
 import { PlantillaComponent } from './plantilla/plantilla.component';
+import { VerPlantillaComponent } from './ver-plantilla/ver-plantilla.component';
 
 const routes: Routes = [
   {
@@ -42,6 +43,9 @@ const routes: Routes = [
   },
   {
     path: 'admin/code-box/:form1', component: CodeBoxComponent
+  },
+  {
+    path: 'plantillas/:form1', component: VerPlantillaComponent
   },
   {
     path: 'plantillas', component: PlantillaComponent

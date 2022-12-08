@@ -46,7 +46,7 @@ export class HomeAdminComponent implements OnInit {
   
   planMuestra: Plan = {
     tituloDePlan: '' ,
-    precioPlan: 2,
+    precioPlan: 0,
     caracteristicas: []
   };
 
