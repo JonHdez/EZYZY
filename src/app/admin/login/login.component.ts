@@ -1,9 +1,10 @@
+import { Administrador } from 'src/app/interfaces/administrador.interface';
 import { AdministradorsService } from './../../services/administrador.service';
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 import { TokenService } from 'src/app/services/token.service';
 import { AuthService } from 'src/app/services/auth.service';
+import {FormBuilder, FormControl, FormGroup, FormGroupDirective, NgForm, Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-login',
@@ -11,14 +12,19 @@ import { AuthService } from 'src/app/services/auth.service';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
+  minPw = 5;
 
   public loginAdminForm!: FormGroup;
+  adminAuth!:Administrador;
 
   constructor(private adminSvc: AdministradorsService,
               private formBuilder: FormBuilder, 
               private router:Router,
               private authService: AuthService,
               private tokenService: TokenService) { }
+
+ password= new FormControl('', [Validators.required, Validators.minLength(this.minPw)]);
+ correo = new FormControl('', [Validators.required, Validators.email]);
 
   ngOnInit(): void {
     this.loginAdminForm= this.formBuilder.group({
@@ -28,25 +34,23 @@ export class LoginComponent implements OnInit {
   }
 
   loginAdmin(){
-    this.adminSvc.getAdmin()
-    .subscribe(res=>{
-        const usuarioAdmin = res.find((a:any)=>{
-          console.log('vairbale y contrasenia', a.correo, a.pasword)
-          console.log('vairbale y contrasenia log', this.loginAdminForm.value.correoAdmin, this.loginAdminForm.value.contraseñaAdmin)
-          return a.correo === this.loginAdminForm.value.correoAdmin && a.pasword === this.loginAdminForm.value.contraseñaAdmin
-        });
-        if(usuarioAdmin){
-          alert("Logeado exitosamente");
-          this.loginAdminForm.reset();
-          this.router.navigate(['admin-perfil']);
 
-        }else{
-          
-          alert('Usuario no encontrado')
-        }
-        },
-        error=>{
-          console.log(error);
-      });
+    this.adminAuth =({
+      nombre:'',
+      apellido: '',
+      correo: this.correo.value!,
+      pasword: this.password.value!,
+      fotoUrl: ''
+    });
+
+    this.authService.loginAdmin(this.adminAuth).subscribe({
+      next:(res)=>{
+        this.tokenService.setToken(res.token);
+        console.log(res);
+      }
+    });
+
+    alert("Logeado exitosamente");
+      this.router.navigate(['admin-perfil']);
     }
   }

@@ -8,7 +8,7 @@ import { Administrador } from '../interfaces/administrador.interface';
   providedIn: 'root'
 })
 export class AuthService {
-  private apiUrl = 'https://backend-ezyzy-production.up.railway.app/auth'
+  private apiUrl = 'https://backend-ezyzy-production.up.railway.app/auth/'
   constructor(private http: HttpClient) { }
 
   loginCliente(cliente: Cliente): Observable<any> {
