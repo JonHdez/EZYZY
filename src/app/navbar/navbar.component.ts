@@ -9,13 +9,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor(private isloggedin: AuthService, private authToken: TokenService) { }
+  constructor(private authservice: AuthService, private authToken: TokenService) { }
 
   ngOnInit(): void {
+
+    this.authservice.getCliente().subscribe({
+      next:(res)=>{
+        console.log(res);
+      }
+    });
   }
+  
 
   logout(){
-    if (this.isloggedin.isLoggedIn()===true) {
+    if (this.authservice.isLoggedIn()===true) {
       this.authToken.RemoveToken();
     } else {
       console.log(false);
