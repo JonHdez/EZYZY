@@ -37,7 +37,7 @@ const routes: Routes = [
     path: 'home', component: HomeComponent
   },
   {
-    path: 'admin-companies/code-box', component: CodeBoxComponent
+    path: 'admin-companies/code-box/:form1', component: CodeBoxComponent
   },
 ];
 

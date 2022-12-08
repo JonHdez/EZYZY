@@ -1,5 +1,7 @@
+import { PlantillasService } from './../../services/plantilla.service';
 
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 
 
@@ -11,14 +13,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CodeBoxComponent implements OnInit {
 
-
-  
+  codigoHtmlPlantilla:any;
+  codeHtmlId:any;
   $js: string = '';
   $css: string = '';
   $html: string = '';
+  idPlantilla:string='';
 
 
-  constructor() {
+  constructor(private route: ActivatedRoute, private plantillaSvc:PlantillasService) {
 
   }
 
@@ -59,8 +62,16 @@ export class CodeBoxComponent implements OnInit {
   }
   
   ngOnInit(): void {
+    this.idPlantilla= this.route.snapshot.params['form1'];
+    console.log('hue: ', this.route.snapshot.params['form1'])
 
+    this.plantillaSvc.getPlantilla(this.idPlantilla).subscribe({
+      next:(res)=>{
+        this.codigoHtmlPlantilla = res.codigohtml;
+        console.log(`codigo plantilla en CodeBox ${res.tituloDePlantilla}`,this.codigoHtmlPlantilla);
+        this.$html=this.codigoHtmlPlantilla;
+        this.update();
+      }
+    });
   }
-
-
 }

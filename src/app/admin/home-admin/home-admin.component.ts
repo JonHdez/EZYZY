@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { tap } from 'rxjs/operators';
 import { Administrador } from 'src/app/interfaces/administrador.interface';
@@ -24,6 +25,9 @@ import { faCheck } from '@fortawesome/free-solid-svg-icons';
   styleUrls: ['./home-admin.component.scss'],
 })
 export class HomeAdminComponent implements OnInit {
+
+  private form1="";
+
   //Iconos
   faCheck = faCheck;
   faXmark = faXmark;
@@ -38,6 +42,7 @@ export class HomeAdminComponent implements OnInit {
   clientes!: Cliente[];
   empresas!: Empresa[];
   tituloDePlan:any
+  codigoHtmlPlantilla:any;
   
   planMuestra: Plan = {
     tituloDePlan: '' ,
@@ -60,12 +65,15 @@ export class HomeAdminComponent implements OnInit {
     private plantillaSvc: PlantillasService,
     private planesSvc: PlansService,
     private clienteSvs: ClientesService,
-    private empresaSvs: EmpresasService
+    private empresaSvs: EmpresasService,
+    private router: Router
   ) {}
   
   verPlantilla(id:string) {
     console.log(id)
     this.getPlantilla(id)
+    this.form1= id;
+    this.router.navigate(["/admin-companies/code-box/"+this.form1], )
   }
 
   newCliente(newcliente: Cliente) {
@@ -78,7 +86,8 @@ export class HomeAdminComponent implements OnInit {
   getPlantilla(id: string){
     const nuevaPlantilla = this.plantillaSvc.getPlantilla(id).subscribe({
       next:(res)=>{
-        console.log(res.codigohtml);
+        this.codigoHtmlPlantilla = res.codigohtml;
+        console.log(`codigo plantilla ${res.tituloDePlantilla}`,this.codigoHtmlPlantilla);
       }
     });
   }

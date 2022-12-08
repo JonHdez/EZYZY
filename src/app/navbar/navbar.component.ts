@@ -13,11 +13,11 @@ export class NavbarComponent implements OnInit {
 
   ngOnInit(): void {
 
-    this.authservice.getCliente().subscribe({
-      next:(res)=>{
-        console.log(res);
-      }
-    });
+    // this.authservice.getCliente().subscribe({
+    //   next:(res)=>{
+    //     console.log(res);
+    //   }
+    // });
   }
   
 
