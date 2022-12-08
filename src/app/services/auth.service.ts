@@ -26,5 +26,6 @@ export class AuthService {
   registerAdmin(admin: Administrador): Observable<any> {
     return this.http.post<any>(this.apiUrl + 'registerAdmin', admin)
   }
+
  
 }
