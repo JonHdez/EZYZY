@@ -10,7 +10,7 @@ import { TokenService } from './token.service';
 export class AdministradorsService {
   private apiUrl = 'https://backend-ezyzy-production.up.railway.app/admin/'
   constructor(private http: HttpClient,
-    private tokenService: TokenService) { }
+              private tokenService: TokenService) { }
 
   getAdmin():Observable<Administrador[]>{
     const headers = new HttpHeaders({

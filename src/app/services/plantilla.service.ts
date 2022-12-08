@@ -1,17 +1,24 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Plantilla } from '../interfaces/plantilla.interface';
+import { TokenService } from './token.service';
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class PlantillasService {
-  private apiUrl = 'https://backend-ezyzy-production.up.railway.app/plantilla'
-  constructor(private http: HttpClient) { }
+  private apiUrl = 'https://backend-ezyzy-production.up.railway.app/plantilla/'
+  constructor(private http: HttpClient,
+              private tokenService: TokenService) { }
 
   getPlantillas():Observable<Plantilla[]>{
-    return this.http.get<Plantilla[]>(this.apiUrl)
+    const headers = new HttpHeaders({
+      "Content-Type": "application/json",
+      "Authorization": "Bearer " +  this.tokenService.getToken(),
+    });
+    return this.http.get<Plantilla[]>(this.apiUrl, {headers})
   }
   
   newPlantilla(plantilla: Plantilla):Observable<Plantilla>{

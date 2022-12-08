@@ -1,17 +1,24 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Plan } from '../interfaces/plan.interface';
+import { TokenService } from './token.service';
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class PlansService {
-  private apiUrl = 'https://backend-ezyzy-production.up.railway.app/plan'
-  constructor(private http: HttpClient) { }
+  private apiUrl = 'https://backend-ezyzy-production.up.railway.app/plan/'
+  constructor(private http: HttpClient,
+              private tokenService: TokenService) { }
 
   getPlanes():Observable<Plan[]>{
-    return this.http.get<Plan[]>(this.apiUrl)
+      const headers = new HttpHeaders({
+      "Content-Type": "application/json",
+      "Authorization": "Bearer " +  this.tokenService.getToken(),
+    });
+    return this.http.get<Plan[]>(this.apiUrl, {headers})
   }
 
   newPlan(plan: Plan):Observable<Plan>{
