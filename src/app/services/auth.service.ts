@@ -36,5 +36,9 @@ export class AuthService {
     return this.http.post<any>(this.apiUrl + 'registerAdmin', admin)
   }
 
+  getCliente():Observable<any>{
+    return this.http.post<any>(this.apiUrl+ 'me', {})
+  }
+
  
 }
