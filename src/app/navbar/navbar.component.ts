@@ -1,3 +1,5 @@
+import { TokenService } from 'src/app/services/token.service';
+import { AuthService } from 'src/app/services/auth.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor() { }
+  constructor(private isloggedin: AuthService, private authToken: TokenService) { }
 
   ngOnInit(): void {
   }
 
+  logout(){
+    if (this.isloggedin.isLoggedIn()===true) {
+      this.authToken.RemoveToken();
+    } else {
+      console.log(false);
+    }
+  }
 }

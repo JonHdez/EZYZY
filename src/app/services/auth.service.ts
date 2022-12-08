@@ -1,3 +1,4 @@
+import { TokenService } from 'src/app/services/token.service';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
@@ -9,7 +10,15 @@ import { Administrador } from '../interfaces/administrador.interface';
 })
 export class AuthService {
   private apiUrl = 'https://backend-ezyzy-production.up.railway.app/auth/'
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private tokenservice: TokenService) { }
+
+  isLoggedIn(){
+    if (this.tokenservice.getToken()) {
+      return true;
+    } else {
+      return false;
+    }
+  }
 
   loginCliente(cliente: Cliente): Observable<any> {
     return this.http.post<any>(this.apiUrl + 'loginCliente', cliente)
