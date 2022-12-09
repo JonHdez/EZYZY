@@ -4,5 +4,6 @@ export interface Administrador {
     apellido:string; 
     correo:string; 
     pasword:string; 
-    fotoUrl:string; 
+    fotoUrl:string;
+    isAdmin: string
 }

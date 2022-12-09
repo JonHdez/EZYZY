@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TokenService } from 'src/app/services/token.service';
 
 
 @Component({
@@ -7,10 +8,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  
-  constructor() { }
+  nombreClinte!: string
+  constructor(private tokenService: TokenService) { }
 
   ngOnInit(): void {
+   
   }
 
 }

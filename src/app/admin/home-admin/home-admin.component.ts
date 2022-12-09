@@ -184,12 +184,10 @@ export class HomeAdminComponent implements OnInit {
   ngOnInit(): void {
 
     this.token={"token":this.authToken.getToken()}
-    console.log('token navbar', this.token)
 
-    this.authservice.decodedToken(this.token).subscribe({
+    this.authToken.decodedToken(this.token).subscribe({
       next: res=>{
         this.info=res;
-        console.log('info:', this.info);
       },
       error: error=>{
         console.log(error);
@@ -201,7 +199,6 @@ export class HomeAdminComponent implements OnInit {
       .pipe(
         tap((administradores: Administrador[]) => {
           this.administradores = administradores;
-          console.log(this.administradores);
         })
       )
       .subscribe();
@@ -211,7 +208,6 @@ export class HomeAdminComponent implements OnInit {
       .pipe(
         tap((plantillas: Plantilla[]) => {
           this.plantillas = plantillas;
-          console.log(this.plantillas);
         })
       )
       .subscribe();
@@ -221,7 +217,6 @@ export class HomeAdminComponent implements OnInit {
       .pipe(
         tap((planes: Plan[]) => {
           this.planes = planes;
-          console.log(this.planes);
         })
       )
       .subscribe();
@@ -231,7 +226,6 @@ export class HomeAdminComponent implements OnInit {
       .pipe(
         tap((clientes: Cliente[]) => {
           this.clientes = clientes;
-          console.log(this.clientes);
         })
       )
       .subscribe();
@@ -241,7 +235,6 @@ export class HomeAdminComponent implements OnInit {
       .pipe(
         tap((empresas: Empresa[]) => {
           this.empresas = empresas;
-          console.log(this.empresas);
         })
       )
       .subscribe();

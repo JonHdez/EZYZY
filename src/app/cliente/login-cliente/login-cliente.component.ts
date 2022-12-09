@@ -76,7 +76,7 @@ export class LoginClienteComponent implements OnInit {
         this.router.navigate(['home']);
       },
         error: error=>{
-          alert("Usuario o contrasena no validos");
+          alert("Usuario o contraseña no validos");
           console.log("error",error);
         }
       });

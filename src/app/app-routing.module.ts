@@ -12,25 +12,26 @@ import { PerfilEmpresaComponent } from './empresa/perfil-empresa/perfil-empresa.
 import { CodeBoxComponent } from './admin/code-box/code-box.component'
 import { PlantillaComponent } from './plantilla/plantilla.component';
 import { VerPlantillaComponent } from './ver-plantilla/ver-plantilla.component';
+import { LoginGuard } from './guards/login.guard';
 
 const routes: Routes = [
   {
     path: '', component:LandingPageComponent
   },
   {
-    path: 'loginCliente', component:LoginClienteComponent
+    path: 'loginCliente', component:LoginClienteComponent, canActivate:[LoginGuard]
   },
   {
     path: 'admin-perfil', component: HomeAdminComponent
   },
   {
-    path: 'admin', component: LoginComponent
+    path: 'admin', component: LoginComponent, canActivate:[LoginGuard]
   },
   {
     path: 'perfil-empresa', component: PerfilEmpresaComponent
   },
   {
-    path: 'registroCliente', component:RegistroClienteComponent
+    path: 'registroCliente', component:RegistroClienteComponent, canActivate:[LoginGuard]
   },
   {
     path: 'planes', component: PlanesComponent

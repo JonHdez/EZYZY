@@ -47,13 +47,13 @@ export class LoginComponent implements OnInit {
       apellido: '',
       correo: this.correo.value!,
       pasword: this.password.value!,
-      fotoUrl: ''
+      fotoUrl: '',
+      isAdmin:''
     });
 
     this.authService.loginAdmin(this.adminAuth).subscribe({
       next:(res)=>{
         this.tokenService.setToken(res.token);
-        console.log(res);
         alert("Logeado exitosamente");
         this.router.navigate(['admin-perfil']);
       },

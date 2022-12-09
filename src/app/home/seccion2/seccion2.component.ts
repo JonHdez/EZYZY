@@ -41,7 +41,6 @@ export class Seccion2Component implements OnInit {
     .pipe(
       tap((plantillas: Plantilla[]) => {
         this.plantillas = plantillas;
-        console.log(this.plantillas);
       })
     )
     .subscribe();

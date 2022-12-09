@@ -15,12 +15,10 @@ export class NavbarComponent implements OnInit {
 
   constructor(private authservice: AuthService, private authToken: TokenService) { 
     this.token={"token":this.authToken.getToken()}
-    console.log('token navbar', this.token)
 
-    this.authservice.decodedToken(this.token).subscribe({
+    this.authToken.decodedToken(this.token).subscribe({
       next: res=>{
         this.info=res;
-        console.log('info:', this.info);
       },
       error: error=>{
         console.log(error);
@@ -30,7 +28,7 @@ export class NavbarComponent implements OnInit {
   
 
   ngOnInit(): void {
-    console.log("cargas primero?")
+    console.log('usuario es Admin: ', this.authToken.isAdmin());
   }
   
 
