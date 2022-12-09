@@ -43,23 +43,19 @@ export class LoginClienteComponent implements OnInit {
   matcher = new MyErrorStateMatcher();
 
   ngOnInit(): void {
+
+    if (this.authService.isLoggedIn()===true) {
+      this.tokenService.RemoveToken();
+    } else {
+      console.log(false);
+    }
         
     this.loginForm= this.formBuilder.group({
       correo:[''],
       contraseña:['']
     });
     
-    this.clienteSvc.getClientes().pipe(
-      tap((clientes:Cliente[]) => {
-        this.clientes = clientes
-        console.log(this.clientes)
-
-      }
-      )
-    )
-    .subscribe();
-
-
+ 
   }
 
   login(){
@@ -77,11 +73,15 @@ export class LoginClienteComponent implements OnInit {
       next:(res)=>{
         this.tokenService.setToken(res.token);
         console.log(res);
-      }
-    });
-
-    alert("Logeado exitosamente");
         this.router.navigate(['home']);
+      },
+        error: error=>{
+          alert("Usuario o contrasena no validos");
+          console.log("error",error);
+        }
+      });
+
+        
     }
   }
 

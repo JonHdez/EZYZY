@@ -14,8 +14,8 @@
     </div>
     <div class="usuario">
         <div  class="vl"></div>
-        <img src="../../assets/img/fotoPerfil.webp" alt="" id="propic">
-        <button mat-button [matMenuTriggerFor]="menuUsuario">Usuario &#11167;</button>
+        <img src="{{info.fotoUrl}}}" alt="" id="propic">
+        <button mat-button [matMenuTriggerFor]="menuUsuario">Bienvenido {{info.nombre}} &#11167;</button>
         <mat-menu #menuUsuario="matMenu">
             <button [routerLink]="['/perfil-empresa']"  mat-menu-item>Perfil</button>
             <button [routerLink]="['/loginCliente']" (click)="logout()" mat-menu-item>Logout</button>
