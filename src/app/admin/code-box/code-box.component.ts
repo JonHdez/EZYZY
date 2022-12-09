@@ -56,6 +56,7 @@ export class CodeBoxComponent implements OnInit {
 
   guardarHtml() {
     const html = this.createHtml();
+    console.log(html)
     return html;
   }
   
