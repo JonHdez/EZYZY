@@ -27,6 +27,13 @@ export class LoginComponent implements OnInit {
  correo = new FormControl('', [Validators.required, Validators.email]);
 
   ngOnInit(): void {
+
+    if (this.authService.isLoggedIn()===true) {
+      this.tokenService.RemoveToken();
+    } else {
+      console.log(false);
+    }
+
     this.loginAdminForm= this.formBuilder.group({
       correoAdmin:[''],
       contraseñaAdmin:['']
@@ -47,10 +54,13 @@ export class LoginComponent implements OnInit {
       next:(res)=>{
         this.tokenService.setToken(res.token);
         console.log(res);
-      }
-    });
-
-    alert("Logeado exitosamente");
-      this.router.navigate(['admin-perfil']);
+        alert("Logeado exitosamente");
+        this.router.navigate(['admin-perfil']);
+      },
+        error: error=>{
+          alert("Usuario o contrasena no validos");
+          console.log("error",error);
+        }
+      });
     }
   }
