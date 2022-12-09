@@ -28,4 +28,8 @@ export class PlansService {
   updatePlan(plan: Plan):Observable<Plan>{
     return this.http.put<Plan>(this.apiUrl, plan)
   }
+
+  deletePlan(id:string): Observable<Plan>{
+    return this.http.delete<Plan>(this.apiUrl+id)
+  }
 }

@@ -94,7 +94,7 @@
                       <button mat-raised-button color="primary">
                         <fa-icon [icon]="faPenToSquare"></fa-icon>
                       </button>
-                      <button mat-raised-button color="primary">
+                      <button (click)="deletePlan(plan._id)" mat-raised-button color="primary">
                         <fa-icon [icon]="faTrash"></fa-icon>
                       </button>
                     </div>

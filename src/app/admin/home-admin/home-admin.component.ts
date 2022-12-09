@@ -51,7 +51,7 @@ export class HomeAdminComponent implements OnInit {
   codigoHtmlPlantilla: any;
 
   planMuestra: Plan = {
-    tituloDePlan: '',
+    tituloDePlan: 'Plan',
     precioPlan: 0,
     caracteristicas: [],
   };
@@ -122,6 +122,9 @@ export class HomeAdminComponent implements OnInit {
         });
       },
     });
+  }
+  deletePlan(id: string){
+    this.planesSvc.deletePlan(id).subscribe({next: (res)=>{console.log(res)}})
   }
 
   agregarCaracteristica(){
