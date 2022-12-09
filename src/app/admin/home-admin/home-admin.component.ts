@@ -116,6 +116,20 @@ export class HomeAdminComponent implements OnInit {
     });
   }
 
+  agregarCaracteristica(){
+    const nuevaCaracteristica = (document.getElementById('cara') as HTMLInputElement).value;
+    this.planMuestra.caracteristicas.push(nuevaCaracteristica);
+    (document.getElementById('cara') as HTMLInputElement).value = ''
+  }
+
+  limpiarMuestra(){
+  this.planMuestra = {
+    tituloDePlan: '',
+    precioPlan: 0,
+    caracteristicas: [],
+  };
+  }
+
   verPlantilla(id: string) {
     console.log(id);
     this.getPlantilla(id);

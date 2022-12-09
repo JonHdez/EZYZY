@@ -62,20 +62,19 @@ export class CodeBoxComponent implements OnInit {
   
   ngOnInit(): void {
     this.idPlantilla= this.route.snapshot.params['form1'];
-    console.log('hue: ', this.route.snapshot.params['form1'])
 
     this.plantillaSvc.getPlantilla(this.idPlantilla).subscribe({
       next:(res)=>{
         const styleA = res.codigohtml.indexOf('<style>')
         const styleB = res.codigohtml.indexOf('</style>')
-        const finalHtml = res.codigohtml.indexOf('</html>')
         const html1 = res.codigohtml.substring(0, styleA)
+        const finalHtml = res.codigohtml.indexOf('</html>')
         const html2 = res.codigohtml.substring(styleB , finalHtml + 7)
         const htmlCompleto = html1 + html2
         const css = res.codigohtml.substring(styleA + 7, styleB)
         this.$css = css;
         this.$html= htmlCompleto;
-        console.log(htmlCompleto)
+        console.log(res.codigohtml)
         this.update();
       }
     });

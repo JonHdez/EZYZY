@@ -125,7 +125,7 @@
                             let caracteristica of planMuestra.caracteristicas
                           "
                           role="listitem"
-                          >{{ caracteristica[0] }}</mat-list-item
+                          >{{ caracteristica }}</mat-list-item
                         >
                       </mat-list>
                     </div>
@@ -166,9 +166,10 @@
                         appearance="fill"
                       >
                         <mat-label>Caracteristicas</mat-label>
-                        <input matInput />
+                        <input id="cara" matInput />
                       </mat-form-field>
                       <button
+                        (click)="agregarCaracteristica()"
                         class="btn-caracteristica"
                         mat-raised-button
                         color="primary"
@@ -179,7 +180,7 @@
 
                     <div class="btns-modificar">
                       <button
-                      
+                        (click)="newPlan(planMuestra)"
                         class="btn-guardar"
                         mat-raised-button
                         color="primary"
@@ -188,11 +189,12 @@
                       </button>
 
                       <button
+                        (click)="limpiarMuestra()"
                         class="btn-cancelar"
                         mat-raised-button
                         color="warn"
                       >
-                        Cancelar
+                        Limpiar
                       </button>
                     </div>
                   </form>
