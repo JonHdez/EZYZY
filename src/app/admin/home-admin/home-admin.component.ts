@@ -5,7 +5,7 @@ import { Administrador } from 'src/app/interfaces/administrador.interface';
 import { AdministradorsService } from '../../services/administrador.service';
 import { PlantillasService } from '../../services/plantilla.service';
 import { Plantilla } from '../../interfaces/plantilla.interface';
-import { Plan} from 'src/app/interfaces/plan.interface';
+import { Plan } from 'src/app/interfaces/plan.interface';
 import { PlansService } from 'src/app/services/plan.service';
 import { ClientesService } from '../../services/clientes.service';
 import { Cliente } from 'src/app/interfaces/cliente.interface';
@@ -18,6 +18,7 @@ import { faPenToSquare } from '@fortawesome/free-solid-svg-icons';
 import { faTrash } from '@fortawesome/free-solid-svg-icons';
 import { faXmark } from '@fortawesome/free-solid-svg-icons';
 import { faCheck } from '@fortawesome/free-solid-svg-icons';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-home-admin',
@@ -25,8 +26,7 @@ import { faCheck } from '@fortawesome/free-solid-svg-icons';
   styleUrls: ['./home-admin.component.scss'],
 })
 export class HomeAdminComponent implements OnInit {
-
-  private form1="";
+  private form1 = '';
 
   //Iconos
   faCheck = faCheck;
@@ -41,13 +41,13 @@ export class HomeAdminComponent implements OnInit {
   planes!: Plan[];
   clientes!: Cliente[];
   empresas!: Empresa[];
-  tituloDePlan:any
-  codigoHtmlPlantilla:any;
-  
+  tituloDePlan: any;
+  codigoHtmlPlantilla: any;
+
   planMuestra: Plan = {
-    tituloDePlan: '' ,
+    tituloDePlan: '',
     precioPlan: 0,
-    caracteristicas: []
+    caracteristicas: [],
   };
 
   //Columnas de Tablas
@@ -68,12 +68,59 @@ export class HomeAdminComponent implements OnInit {
     private empresaSvs: EmpresasService,
     private router: Router
   ) {}
-  
-  verPlantilla(id:string) {
-    console.log(id)
-    this.getPlantilla(id)
-    this.form1= id;
-    this.router.navigate(["/admin/code-box/"+this.form1], )
+
+  statusTrue(id: any) {
+    console.log(id);
+    this.clienteSvs.getClinte(id).subscribe({
+      next: (res) => {
+        const cliente = {
+          nombre: res.nombre,
+          Apellido: res.Apellido,
+          correo: res.correo,
+          pasword: res.pasword,
+          fotoUrl: res.fotoUrl,
+          status: 'Activo',
+        };
+        this.clienteSvs.updateCliente(id, cliente).subscribe({
+          next: (res) => {
+            console.log(res);
+          },
+        });
+      },
+    });
+  }
+  statusFalse(id: any) {
+    console.log(id);
+    this.clienteSvs.getClinte(id).subscribe({
+      next: (res) => {
+        console.log(res);
+        const cliente = {
+          nombre: res.nombre,
+          Apellido: res.Apellido,
+          correo: res.correo,
+          pasword: res.pasword,
+          fotoUrl: res.fotoUrl,
+          status: 'Inactivo',
+        };
+        for (let i = 0; i < this.clientes.length; i++) {
+          if (this.clientes[i].correo===res.correo) {
+            this.clientes.splice(i, 1, cliente)
+          }  
+        }
+        this.clienteSvs.updateCliente(id, cliente).subscribe({
+          next: (res) => {
+            console.log(res);
+          },
+        });
+      },
+    });
+  }
+
+  verPlantilla(id: string) {
+    console.log(id);
+    this.getPlantilla(id);
+    this.form1 = id;
+    this.router.navigate(['/admin/code-box/' + this.form1]);
   }
 
   newCliente(newcliente: Cliente) {
@@ -83,12 +130,15 @@ export class HomeAdminComponent implements OnInit {
     });
   }
 
-  getPlantilla(id: string){
+  getPlantilla(id: string) {
     const nuevaPlantilla = this.plantillaSvc.getPlantilla(id).subscribe({
-      next:(res)=>{
+      next: (res) => {
         this.codigoHtmlPlantilla = res.codigohtml;
-        console.log(`codigo plantilla ${res.tituloDePlantilla}`,this.codigoHtmlPlantilla);
-      }
+        console.log(
+          `codigo plantilla ${res.tituloDePlantilla}`,
+          this.codigoHtmlPlantilla
+        );
+      },
     });
   }
 
@@ -156,5 +206,7 @@ export class HomeAdminComponent implements OnInit {
         })
       )
       .subscribe();
+
+
   }
 }

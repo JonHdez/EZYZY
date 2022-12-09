@@ -287,10 +287,10 @@
                   <th class="th" mat-header-cell *matHeaderCellDef>Accion</th>
                   <td class="td" mat-cell *matCellDef="let cliente">
                     <div class="btns-accion">
-                      <button mat-raised-button color="primary">
+                      <button (click)="statusTrue(cliente._id)" mat-raised-button color="primary">
                         <fa-icon [icon]="faCheck"></fa-icon>
                       </button>
-                      <button mat-raised-button color="primary">
+                      <button (click)="statusFalse(cliente._id)" mat-raised-button color="primary">
                         <fa-icon [icon]="faXmark"></fa-icon>
                       </button>
                     </div>
