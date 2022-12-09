@@ -1,11 +1,59 @@
 @import '../../../styles.scss';
 
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 800px
+}
+
+#botonVer{
+    width: max-content;
+    height: max-content;
+    margin-left: 2px;
+}
+
+#titulo{
+    font-size:small;
+    color: white;
+    align-self: end;
+}
+
+#abajoTarjeta{
+    background-color: #275d8a;
+    width: inherit;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
 .containerseccion2{
     background-color: $azulClaro;
 }
 
 #containerNuevasPlantillas{
     margin: 5px 45px 5px 45px;
+}
+
+#cardPlantillas{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-left: 450px
+}
+
+#tarjetaPlantilla{
+    display: flex;
+    align-items: center;
+    height: 200px;
+    width: 180px;
+    margin-bottom: 10px
+}
+
+.img-card{
+    width: 180px;
+    height: 100px;
+    object-fit: scale-down;
 }
 
 #columnaChica{

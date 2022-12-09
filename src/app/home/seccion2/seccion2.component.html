@@ -6,22 +6,39 @@
 <div class="containerseccion2">
     <div class="titulo">
         <h1>Nuevas plantillas</h1>
-        <h3><u>Ver mas</u></h3>
+        <h3 [routerLink]="['/plantillas']"><u> Ver mas</u></h3>
     </div>
 
     <br>
 
-
+    <div class="container">
     <div class="container text-center" id="containerNuevasPlantillas">
         <div class="row">
-            <div class="col-3" id="columnaChica"><app-tarjetas></app-tarjetas></div>
-            <div class="col-2" id="columnaChica"><app-tarjetas></app-tarjetas></div>
-            <div class="col-2" id="columnaChica"><app-tarjetas></app-tarjetas></div>
+          <div class="card-container" id="cardPlantillas">
+            <mat-card *ngFor="let plantilla of plantillas" class="card" id="tarjetaPlantilla">
+              <img
+                class="img-card"
+                mat-card-image
+                src="../../../assets/img/diigo.jpeg"
+                alt=""
+              />
+              <mat-card-content>
+                
+              </mat-card-content>
+              <div id="abajoTarjeta">
+              <mat-card-actions align="end">
+                <mat-card-title id="titulo">{{
+                  plantilla.tituloDePlantilla
+                }}</mat-card-title>
+                <button [routerLink]="['plantillas/:form1']" routerLinkActive="router-link-active"  (click)="verPlantilla(plantilla._id)" mat-raised-button id="botonVer">Ver</button>
+              </mat-card-actions>
+            </div>
+            </mat-card>
+          </div>
         </div>
         <div class="row">
-          <div class="col-2" id="columnaChica"><app-tarjetas></app-tarjetas></div>
-          <div class="col-2" id="columnaChica"><app-tarjetas></app-tarjetas></div>
-          <div class="col-3" id="columnaChica"><app-tarjetas></app-tarjetas></div>
+
         </div>
       </div>
+    </div>
 </div>
