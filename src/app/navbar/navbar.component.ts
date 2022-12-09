@@ -28,9 +28,12 @@ export class NavbarComponent implements OnInit {
   
 
   ngOnInit(): void {
-    console.log('usuario es Admin: ', this.authToken.isAdmin());
+  
   }
   
+  validateUser(){
+     this.authToken.isAdmin().then((res)=>{console.log(res)});
+  }
 
   logout(){
     if (this.authservice.isLoggedIn()===true) {

@@ -54,6 +54,8 @@ export class LoginClienteComponent implements OnInit {
       correo:[''],
       contraseña:['']
     });
+
+    
     
  
   }

@@ -96,6 +96,14 @@ export class HomeAdminComponent implements OnInit {
         });
       },
     });
+    this.clienteSvs
+    .getClientes()
+    .pipe(
+      tap((clientes: Cliente[]) => {
+        this.clientes = clientes;
+      })
+    )
+    .subscribe();
   }
   statusFalse(id: any) {
     console.log(id);
@@ -122,9 +130,25 @@ export class HomeAdminComponent implements OnInit {
         });
       },
     });
+    this.clienteSvs
+    .getClientes()
+    .pipe(
+      tap((clientes: Cliente[]) => {
+        this.clientes = clientes;
+      })
+    )
+    .subscribe();
   }
   deletePlan(id: string){
     this.planesSvc.deletePlan(id).subscribe({next: (res)=>{console.log(res)}})
+    this.planesSvc
+      .getPlanes()
+      .pipe(
+        tap((planes: Plan[]) => {
+          this.planes = planes;
+        })
+      )
+      .subscribe();
   }
 
   agregarCaracteristica(){
