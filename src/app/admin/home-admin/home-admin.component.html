@@ -8,16 +8,15 @@
   </head>
   <body>
     <app-navbar></app-navbar>
-
     <div class="container">
       <h1>Administrador</h1>
       <mat-card class="card-administrador">
         <div class="adminPerfil">
           <p class="bienvenido">Bienvenido/a</p>
           <p class="nombreAdmin">
-            {{ administradores[0].nombre }} {{ administradores[0].apellido }}
+            {{ info.nombre}} {{ info.apellido }}
           </p>
-          <img src="../../../assets/img/fotoPerfil.webp" alt="" />
+          <img src="{{info.fotoUrl}}" alt="" />
         </div>
         <mat-tab-group color="primary" mat-align-tabs="center" class="tabs">
           <mat-tab id="admi-tab" label="Administracion de Plantillas">

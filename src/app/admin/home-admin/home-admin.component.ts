@@ -19,6 +19,9 @@ import { faTrash } from '@fortawesome/free-solid-svg-icons';
 import { faXmark } from '@fortawesome/free-solid-svg-icons';
 import { faCheck } from '@fortawesome/free-solid-svg-icons';
 import { Subscription } from 'rxjs';
+import { Token } from 'src/app/interfaces/token.interface';
+import { AuthService } from 'src/app/services/auth.service';
+import { TokenService } from 'src/app/services/token.service';
 
 @Component({
   selector: 'app-home-admin',
@@ -26,6 +29,9 @@ import { Subscription } from 'rxjs';
   styleUrls: ['./home-admin.component.scss'],
 })
 export class HomeAdminComponent implements OnInit {
+
+  token!:Token;
+  info:any;
   private form1 = '';
 
   //Iconos
@@ -66,7 +72,9 @@ export class HomeAdminComponent implements OnInit {
     private planesSvc: PlansService,
     private clienteSvs: ClientesService,
     private empresaSvs: EmpresasService,
-    private router: Router
+    private router: Router,
+    private authservice: AuthService, 
+    private authToken: TokenService
   ) {}
 
   statusTrue(id: any) {
@@ -157,6 +165,20 @@ export class HomeAdminComponent implements OnInit {
   }
 
   ngOnInit(): void {
+
+    this.token={"token":this.authToken.getToken()}
+    console.log('token navbar', this.token)
+
+    this.authservice.decodedToken(this.token).subscribe({
+      next: res=>{
+        this.info=res;
+        console.log('info:', this.info);
+      },
+      error: error=>{
+        console.log(error);
+      }
+    });
+
     this.administradorSvc
       .getAdmin()
       .pipe(
