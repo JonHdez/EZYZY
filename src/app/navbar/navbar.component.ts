@@ -1,3 +1,4 @@
+import { Token } from './../interfaces/token.interface';
 import { TokenService } from 'src/app/services/token.service';
 import { AuthService } from 'src/app/services/auth.service';
 import { Component, OnInit } from '@angular/core';
@@ -9,15 +10,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor(private authservice: AuthService, private authToken: TokenService) { }
+  token!:Token;
+  info:any;
+
+  constructor(private authservice: AuthService, private authToken: TokenService) { 
+    this.token={"token":this.authToken.getToken()}
+    console.log('token navbar', this.token)
+
+    this.authservice.decodedToken(this.token).subscribe({
+      next: res=>{
+        this.info=res;
+        console.log('info:', this.info);
+      },
+      error: error=>{
+        console.log(error);
+      }
+    });
+  }
+  
 
   ngOnInit(): void {
-
-    // this.authservice.getCliente().subscribe({
-    //   next:(res)=>{
-    //     console.log(res);
-    //   }
-    // });
+    console.log("cargas primero?")
   }
   
 

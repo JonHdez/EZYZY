@@ -41,7 +41,7 @@ export class AuthService {
     return this.http.post<any>(this.apiUrl+ 'me', {})
   }
 
-  decodeToken(token:Token):Observable<any> {
+  decodedToken(token:any):Observable<any> {
     return this.http.post<any>(this.apiUrl + 'yo', token);
   } 
  
