@@ -51,7 +51,7 @@ export class HomeAdminComponent implements OnInit {
   codigoHtmlPlantilla: any;
 
   planMuestra: Plan = {
-    tituloDePlan: 'Plan',
+    tituloDePlan: ' ',
     precioPlan: 0,
     caracteristicas: [],
   };
@@ -203,6 +203,15 @@ export class HomeAdminComponent implements OnInit {
       this.planes.push(Plan);
       console.log(Plan);
     });
+    this.planesSvc
+      .getPlanes()
+      .pipe(
+        tap((planes: Plan[]) => {
+          this.planes = planes;
+        })
+      )
+      .subscribe();
+    
   }
 
   ngOnInit(): void {
