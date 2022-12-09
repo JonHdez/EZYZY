@@ -13,7 +13,6 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class CodeBoxComponent implements OnInit {
 
-  codigoHtmlPlantilla:any;
   codeHtmlId:any;
   $js: string = '';
   $css: string = '';
@@ -66,9 +65,16 @@ export class CodeBoxComponent implements OnInit {
 
     this.plantillaSvc.getPlantilla(this.idPlantilla).subscribe({
       next:(res)=>{
-        this.codigoHtmlPlantilla = res.codigohtml;
-        console.log(`codigo plantilla en CodeBox ${res.tituloDePlantilla}`,this.codigoHtmlPlantilla);
-        this.$html=this.codigoHtmlPlantilla;
+        const styleA = res.codigohtml.indexOf('<style>')
+        const styleB = res.codigohtml.indexOf('</style>')
+        const finalHtml = res.codigohtml.indexOf('</html>')
+        const html1 = res.codigohtml.substring(0, styleA)
+        const html2 = res.codigohtml.substring(styleB , finalHtml + 7)
+        const htmlCompleto = html1 + html2
+        const css = res.codigohtml.substring(styleA + 7, styleB)
+        this.$css = css;
+        this.$html= htmlCompleto;
+        console.log(htmlCompleto)
         this.update();
       }
     });
