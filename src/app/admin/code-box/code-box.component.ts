@@ -16,8 +16,7 @@ export class CodeBoxComponent implements OnInit {
   $html: string = '';
   idPlantilla: string = '';
 
-  nuevaPlantilla: Plantilla = {
-    _id: '',
+  nuevaPlantilla: any = {
     tituloDePlantilla: '',
     descripcionPlantilla: '',
     codigohtml: '',
@@ -61,7 +60,6 @@ export class CodeBoxComponent implements OnInit {
 
   guardarHtml() {
     const html = this.createHtml();
-    this.update();
     this.nuevaPlantilla.codigohtml = html;
     this.plantillaSvc
       .newPlantilla(this.nuevaPlantilla)

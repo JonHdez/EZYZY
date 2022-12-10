@@ -35,7 +35,7 @@ export class PlantillasService {
     return this.http.get<Plantilla>(this.apiUrl+id , {headers})
   }
   
-  newPlantilla(plantilla: Plantilla):Observable<Plantilla>{
-    return this.http.post<Plantilla>(this.apiUrl,plantilla);
+  newPlantilla(plantilla: any):Observable<any>{
+    return this.http.post<any>(this.apiUrl,plantilla);
   }
 }
