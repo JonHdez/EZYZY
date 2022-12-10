@@ -8,6 +8,7 @@ import { AuthService } from './auth.service';
 })
 export class TokenService {
   payload:any
+  isAdminBool!:boolean
 
   constructor(private http: HttpClient) {}
   setToken(token: string): void {
@@ -38,15 +39,16 @@ export class TokenService {
   }
 
   async isAdmin(): Promise<boolean> {
-    let isAdmin:boolean = false
+
     if (!this.isLogged()) {
-      return isAdmin
+      return this.isAdminBool
     }
       this.decodedToken({ token: this.getToken() }).subscribe({
       next: (res) => {
-        isAdmin = res.isAdmin==='false';
+        this.payload = res;
+        this.isAdminBool = this.payload.isAdmin === 'true'
       },
     });
-    return isAdmin
+    return this.isAdminBool
   }
 }
