@@ -38,17 +38,4 @@ export class TokenService {
     );
   }
 
-  async isAdmin(): Promise<boolean> {
-
-    if (!this.isLogged()) {
-      return this.isAdminBool
-    }
-      this.decodedToken({ token: this.getToken() }).subscribe({
-      next: (res) => {
-        this.payload = res;
-        this.isAdminBool = this.payload.isAdmin === 'true'
-      },
-    });
-    return this.isAdminBool
-  }
 }
