@@ -32,7 +32,7 @@ export class NavbarComponent implements OnInit {
   }
   
   validateUser(){
-     this.authToken.isAdmin().then((res)=>{console.log(res)});
+     this.authToken.isAdmin().then((res)=>{console.log("es admin?",res)});
   }
 
   logout(){

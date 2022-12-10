@@ -9,12 +9,14 @@ import {MatFormFieldModule } from '@angular/material/form-field';
 import {MatCardModule} from '@angular/material/card';
 import { RegistroClienteComponent } from './registro-cliente/registro-cliente.component';
 import {MatDividerModule} from '@angular/material/divider';
+import { PerfilClienteComponent } from './perfil-cliente/perfil-cliente.component';
 
 
 @NgModule({
   declarations: [
     LoginClienteComponent,
-    RegistroClienteComponent
+    RegistroClienteComponent,
+    PerfilClienteComponent
   ],
   imports: [
     CommonModule,

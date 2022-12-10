@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil</title>
+</head>
+<app-navbar></app-navbar>
+<body>
+    <mat-card id="container">
+    <div class="info">
+        <img src="{{info.fotoUrl}}" alt="foto perfil" id="propic">
+        <div class="nombre">
+            <h1>{{info.nombre}}</h1>
+            <h1>{{info.apellido}}</h1>
+        </div>
+    </div>
+    <div class="infoPerfil">
+        <div class="Titulo">
+            Configuraciones de cuenta
+        </div>
+        <div class="containerCards">
+            <mat-card id="card">
+                <mat-card-header>
+                <mat-card-title>Nombre</mat-card-title>
+                <mat-card-subtitle>{{info.nombre}}</mat-card-subtitle>
+                </mat-card-header>
+            </mat-card>
+            
+            <mat-card id="card">
+                <mat-card-header>
+                <mat-card-title>Apellido</mat-card-title>
+                <mat-card-subtitle>{{info.apellido}}</mat-card-subtitle>
+                </mat-card-header>
+            </mat-card>
+
+            <mat-card id="card">
+                <mat-card-header>
+                <mat-card-title>Status</mat-card-title>
+                <mat-card-subtitle>{{info.status}}</mat-card-subtitle>
+                </mat-card-header>
+            </mat-card>
+            
+            <mat-card id="card">
+                <mat-card-header>
+                <mat-card-title>Correo</mat-card-title>
+                <mat-card-subtitle>{{info.correo}}</mat-card-subtitle>
+                </mat-card-header>
+            </mat-card>
+            
+        </div>
+    </div>
+</mat-card>
+
+<app-footer></app-footer>
+
+

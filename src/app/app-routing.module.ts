@@ -13,6 +13,7 @@ import { CodeBoxComponent } from './admin/code-box/code-box.component'
 import { PlantillaComponent } from './plantilla/plantilla.component';
 import { VerPlantillaComponent } from './ver-plantilla/ver-plantilla.component';
 import { LoginGuard } from './guards/login.guard';
+import { PerfilClienteComponent } from './cliente/perfil-cliente/perfil-cliente.component';
 
 const routes: Routes = [
   {
@@ -50,6 +51,9 @@ const routes: Routes = [
   },
   {
     path: 'plantillas', component: PlantillaComponent
+  },
+  {
+    path: 'perfil-cliente', component: PerfilClienteComponent
   },
 ];
 

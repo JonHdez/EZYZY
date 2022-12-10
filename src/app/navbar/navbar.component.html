@@ -14,7 +14,7 @@
     </div>
     <div class="usuario">
         <div  class="vl"></div>
-        <img src="{{info.fotoUrl}}}" alt="" id="propic">
+        <img src="{{info.fotoUrl}}" alt="" id="propic">
         <button mat-button [matMenuTriggerFor]="menuUsuario">Bienvenido {{info.nombre}} &#11167;</button>
         <mat-menu #menuUsuario="matMenu">
             <button (click)="validateUser()"  [routerLink]="['/perfil-empresa']"  mat-menu-item>Perfil</button>

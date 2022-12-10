@@ -1,3 +1,4 @@
+import { PerfilClienteComponent } from './cliente/perfil-cliente/perfil-cliente.component';
 import { LoginComponent } from './admin/login/login.component';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatDividerModule } from '@angular/material/divider';
@@ -48,6 +49,7 @@ import { VerPlantillaComponent } from './ver-plantilla/ver-plantilla.component';
     LoginClienteComponent,
     HomeAdminComponent,
     PerfilEmpresaComponent,
+    PerfilClienteComponent,
     RegistroClienteComponent,
     NavbarComponent,
     TarjetasPlanComponent,
