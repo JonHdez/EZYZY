@@ -44,7 +44,7 @@ export class TokenService {
     }
       this.decodedToken({ token: this.getToken() }).subscribe({
       next: (res) => {
-        isAdmin = res.isAdmin==='true';
+        isAdmin = res.isAdmin==='false';
       },
     });
     return isAdmin

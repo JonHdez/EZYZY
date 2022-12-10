@@ -37,17 +37,32 @@
 
         <iframe srcdoc=""></iframe>
       </section>
-      <div class="btn-guardar">
-        <button
-          (click)="guardarHtml()"
-          mat-raised-button
-          color="primary"
-          class="btn-guardar-html"
-        >
-          Guardar
-        </button>
+      <div id="formCodeBox">
+        <div class="form-guardar">
+          <form class="example-form">
+            <mat-form-field class="example-full-width">
+              <mat-label>Titulo plantilla</mat-label>
+              <input [(ngModel)]="nuevaPlantilla.tituloDePlantilla" matInput placeholder="Escriba un Titulo para la plantilla" value="">
+            </mat-form-field>
+          
+            <mat-form-field class="example-full-width">
+              <mat-label>Descripcion</mat-label>
+              <textarea [(ngModel)]="nuevaPlantilla.descripcionPlantilla" matInput placeholder="Escriba una Descripcion para la plantilla"></textarea>
+            </mat-form-field>
+          </form>
+        </div>
+        <div class="btn-guardar">
+          <button
+            (click)="guardarHtml()"
+            mat-raised-button
+            color="primary"
+            class="btn-guardar-html"
+          >
+            Guardar
+          </button>
+        </div>
       </div>
-    </div>
+      </div>
     <app-footer></app-footer>
   </body>
 </html>

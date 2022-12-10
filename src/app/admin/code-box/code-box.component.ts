@@ -2,27 +2,31 @@ import { PlantillasService } from './../../services/plantilla.service';
 
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-
-
-
+import { Plantilla } from 'src/app/interfaces/plantilla.interface';
 
 @Component({
   selector: 'app-code-box',
   templateUrl: './code-box.component.html',
-  styleUrls: ['./code-box.component.scss']
+  styleUrls: ['./code-box.component.scss'],
 })
 export class CodeBoxComponent implements OnInit {
-
-  codeHtmlId:any;
+  codeHtmlId: any;
   $js: string = '';
   $css: string = '';
   $html: string = '';
-  idPlantilla:string='';
+  idPlantilla: string = '';
 
+  nuevaPlantilla: Plantilla = {
+    _id: '',
+    tituloDePlantilla: '',
+    descripcionPlantilla: '',
+    codigohtml: '',
+  };
 
-  constructor(private route: ActivatedRoute, private plantillaSvc:PlantillasService) {
-
-  }
+  constructor(
+    private route: ActivatedRoute,
+    private plantillaSvc: PlantillasService
+  ) {}
 
   createHtml = () => {
     const html = this.$html;
@@ -44,39 +48,45 @@ export class CodeBoxComponent implements OnInit {
       </script>
       </body>
     </html>
-    `
-  }
+    `;
+  };
 
-  $ = (selector: any) => document.querySelector(selector)
+  $ = (selector: any) => document.querySelector(selector);
 
   update = () => {
     const html = this.createHtml();
-    this.$('iframe').setAttribute('srcdoc', html )
-  }
+
+    this.$('iframe').setAttribute('srcdoc', html);
+  };
 
   guardarHtml() {
     const html = this.createHtml();
-    console.log(html)
-    return html;
+    this.update();
+    this.nuevaPlantilla.codigohtml = html;
+    this.plantillaSvc
+      .newPlantilla(this.nuevaPlantilla)
+      .subscribe({ next: (res) => {
+        console.log(res)
+      } });
+
   }
-  
+
   ngOnInit(): void {
-    this.idPlantilla= this.route.snapshot.params['form1'];
+    this.idPlantilla = this.route.snapshot.params['form1'];
 
     this.plantillaSvc.getPlantilla(this.idPlantilla).subscribe({
-      next:(res)=>{
-        const styleA = res.codigohtml.indexOf('<style>')
-        const styleB = res.codigohtml.indexOf('</style>')
-        const html1 = res.codigohtml.substring(0, styleA)
-        const finalHtml = res.codigohtml.indexOf('</html>')
-        const html2 = res.codigohtml.substring(styleB , finalHtml + 7)
-        const htmlCompleto = html1 + html2
-        const css = res.codigohtml.substring(styleA + 7, styleB)
+      next: (res) => {
+        const styleA = res.codigohtml.indexOf('<style>');
+        const styleB = res.codigohtml.indexOf('</style>');
+        const html1 = res.codigohtml.substring(0, styleA);
+        const finalHtml = res.codigohtml.indexOf('</html>');
+        const html2 = res.codigohtml.substring(styleB, finalHtml + 7);
+        const htmlCompleto = html1 + html2;
+        const css = res.codigohtml.substring(styleA + 7, styleB);
         this.$css = css;
-        this.$html= htmlCompleto;
-        console.log(res.codigohtml)
+        this.$html = htmlCompleto;
         this.update();
-      }
+      },
     });
   }
 }
