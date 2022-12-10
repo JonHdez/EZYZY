@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import {FormControl, FormBuilder, FormGroupDirective, NgForm, Validators, FormGroup} from '@angular/forms';
 import {ErrorStateMatcher} from '@angular/material/core';
 import { Cliente } from 'src/app/interfaces/cliente.interface';
+import { Router } from '@angular/router';
 
 /** Error when invalid control is dirty, touched, or submitted. */
 export class MyErrorStateMatcher implements ErrorStateMatcher {
@@ -26,7 +27,7 @@ export class RegistroClienteComponent implements OnInit {
 
   minPw = 8;
   maxN=20;
-  constructor(private formBuilder:FormBuilder, private registrocliente:ClientesService) { }
+  constructor(private formBuilder:FormBuilder, private registrocliente:ClientesService,private router: Router) { }
 
 
   apellido= new FormControl('', [Validators.required, Validators.maxLength(this.maxN)]);
@@ -88,7 +89,7 @@ export class RegistroClienteComponent implements OnInit {
       })
     }
 
-
-
+    this.router.navigate(['/loginCliente']);
   }
+
 }
