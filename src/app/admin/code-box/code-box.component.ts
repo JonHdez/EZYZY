@@ -66,6 +66,7 @@ export class CodeBoxComponent implements OnInit {
       .subscribe({ next: (res) => {
         console.log(res)
       } });
+      alert('Se agrego la Nueva Plantilla')
 
   }
 
